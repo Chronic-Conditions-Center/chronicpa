@@ -7,6 +7,12 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Chronic Conditions Center`,
+    description: `Located in Pittsburgh, Chronic Conditions Center provides solutions to neuropathy, knee pain and spinal problems. Call us today for a free consultation.`,
+    author: `Chronic Conditions Center`,
+    siteUrl: `https://chronicpa.com`,
+  },
   /**
    * Adding plugins to this array adds them to your Gatsby site.
    *
@@ -28,7 +34,7 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://wpgatsbydemo.wpengine.com/graphql`,
+          `https://chronicpa.theremotecreative.com/graphql`,
       },
     },
 
@@ -51,20 +57,23 @@ module.exports = {
      * See https://www.gatsbyjs.com/docs/gatsby-image/#setting-up-gatsby-image
      * if you're curious about it.
      */
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
+    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-page-transitions',
+    `gatsby-plugin-smoothscroll`,
     {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter WordPress Blog`,
-        short_name: `GatsbyJS & WP`,
+        name: `Chronic Conditions Center`,
+        short_name: `CCC App`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#3ab1ba`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/ccc-favicon.png`,
       },
     },
 
