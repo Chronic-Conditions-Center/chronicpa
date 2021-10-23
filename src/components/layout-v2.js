@@ -5,6 +5,10 @@ import styled from 'styled-components'
 import PageTransition from 'gatsby-plugin-page-transitions'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
+import "@fontsource/roboto"
+import "@fontsource/roboto/500.css"
+import "@fontsource/roboto-slab"
+
 import "../css/slick.css"
 import "../css/slick-theme.css"
 

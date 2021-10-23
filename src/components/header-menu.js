@@ -86,7 +86,7 @@ const MainNav = styled.nav`
                 left: 0;
                 visibility: hidden;
                 opacity: 0;
-                z-index: 1;
+                z-index: 3;
                 transition: opacity .2s ease-in;
                 width: 240px;
                 margin: 0;

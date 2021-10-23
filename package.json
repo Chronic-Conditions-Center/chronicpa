@@ -8,6 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@fontsource/roboto": "^4.5.1",
+    "@fontsource/roboto-slab": "^4.5.1",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.3.0",
     "gatsby-image": "^3.3.0",
