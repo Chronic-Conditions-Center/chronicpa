@@ -69,6 +69,20 @@ const BlockContent = styled.section`
       width: 50%;
     }
   }
+  .flex-col {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .col-half {
+      width: 50%;
+      &:first-child {
+        padding-right: 30px;
+      }
+      &:last-child {
+        padding-left: 30px;
+      }
+    }
+  }
   blockquote {
     text-align: center;
     border-left: none;

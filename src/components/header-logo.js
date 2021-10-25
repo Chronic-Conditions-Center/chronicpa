@@ -9,7 +9,7 @@ const HeaderLogo = () => {
         childImageSharp {
           gatsbyImageData (
               width: 200
-              placeholder: BLURRED
+              placeholder: TRACED_SVG
               formats: [AUTO, WEBP, AVIF]
           )
         }
