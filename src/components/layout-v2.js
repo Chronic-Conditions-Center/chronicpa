@@ -11,6 +11,7 @@ import "@fontsource/roboto-slab"
 
 import "../css/slick.css"
 import "../css/slick-theme.css"
+import "../css/image-gallery.scss"
 
 import HeaderLogo from "../components/header-logo"
 import HeaderMenu from "../components/header-menu"

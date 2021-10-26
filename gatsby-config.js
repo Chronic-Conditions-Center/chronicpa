@@ -63,6 +63,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-page-transitions',
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-sass`,
     {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
       resolve: `gatsby-plugin-manifest`,

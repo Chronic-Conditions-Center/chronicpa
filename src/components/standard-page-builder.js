@@ -3,6 +3,7 @@
 import React from "react"
 import CallToAction from "../layouts/CallToAction"
 import FullWidthSection from "../layouts/FullWidthSection"
+import GallerySlideshow from "../layouts/GallerySlideshow"
 import PageBanner from "../layouts/PageBanner"
 import TwoColSection from "../layouts/TwoColSection"
 
@@ -23,6 +24,7 @@ const StandardPageBuilder = ({ layoutData }) => {
     Page_Custompagebuilder_PageBuilder_FullWidthSection: FullWidthSection,
     Page_Custompagebuilder_PageBuilder_CallToAction: CallToAction,
     Page_Custompagebuilder_PageBuilder_TwoColumnsImage: TwoColSection,
+    Page_Custompagebuilder_PageBuilder_GallerySlideshow: GallerySlideshow,
     page_default: Default
   }
 
