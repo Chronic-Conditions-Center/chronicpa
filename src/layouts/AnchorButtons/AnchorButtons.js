@@ -1,24 +1,29 @@
-// src/layouts/GallerySlideshow/GallerySlideshow.js
+// src/layouts/AnchorButtons/AnchorButtons.js
 
 import React from "react"
 import styled from 'styled-components'
-import ImageGallery from 'react-image-gallery'
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
-const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorScheme, galleryBottomPadding, slideshowImages }) => {
+const AnchorButtons = ({ anchorSectionId, anchorTopPadding, anchorBottomPadding, anchorColorScheme, anchorSectionTitle, anchorButtonMap }) => {
 
-    const galleryMap = slideshowImages
+    const buttonMap = anchorButtonMap
 
     return (
       <BlockContent
-      id={gallerySectionId}
-      className={`color-${galleryColorScheme}`}
+      id={anchorSectionId}
+      className={`color-${anchorColorScheme}`}
       style={{
-          paddingTop: `${galleryTopPadding}px`,
-          paddingBottom: `${galleryBottomPadding}px`
+          paddingTop: `${anchorTopPadding}px`,
+          paddingBottom: `${anchorBottomPadding}px`
       }}
       >
-        <div class="gallery-row">
-            <ImageGallery items={galleryMap.map(item => ({ original: item.sourceUrl , thumbnail: item.sourceUrl }))}/>
+        <div>
+            <h4 class="anchor-title">{anchorSectionTitle}</h4>
+            <div class="button-row">
+                {buttonMap.map(buttonSrc => (
+                    <button onClick={() => scrollTo(buttonSrc.anchorId)}>{buttonSrc.anchorButtonLabel}</button>
+                ))}
+            </div>
         </div>
       </BlockContent>
     )
@@ -113,6 +118,7 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
         width: 100%;
         margin: 0 auto;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
@@ -127,6 +133,37 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
         max-width: 1200px;
         width: 100%;
         margin: 0 auto;
+    }
+    .button-row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        button {
+            font-family: Roboto;
+            font-size: 20px;
+            width: calc(33.333333333333% - 4%);
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 30px;
+            padding: 10px 30px;
+            color: #fff;
+            background-color: #25afb4;
+            border: none;
+            border-radius: 5px;
+            transition-duration: .3s;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     h2 {
         font-family: "Roboto Slab";
@@ -148,6 +185,21 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
         line-height: 1.4;
         margin-top: 0em;
         margin-bottom: 30px;
+    }
+    h4.anchor-title {
+        font-family: "Roboto Slab";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.4;
+        letter-spacing: 0px;
+        font-style: normal;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #000 !important;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        width: 100%;
     }
     hr {
         margin: 30px 0;
@@ -181,4 +233,4 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
     }
     `
 
-export default GallerySlideshow
+export default AnchorButtons

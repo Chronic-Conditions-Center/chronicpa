@@ -45,7 +45,7 @@ class Layout extends Component {
 
                 <HeaderTop>
 
-                    <p><a href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>  <span onClick={() => scrollTo('/#home_contact')}><FaRegCalendarAlt size={18}/> Schedule a Consult</span></p>
+                    <p><a href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>  <a href="https://calendly.com/ksmithdc" target="_blank" ><FaRegCalendarAlt size={18}/> Schedule a Consult</a></p>
 
                 </HeaderTop>
 

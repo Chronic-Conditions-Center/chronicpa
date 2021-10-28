@@ -89,7 +89,7 @@ class MobileMenu extends Component {
                             <ul class="subMenu">
                                 <li><Link to={"/new-patients/"}>New Patients</Link></li>
                                 <li><Link to={"/tour-of-the-office/"}>Tour of the Office</Link></li>
-                                <li><Link to={"/research/"}>Research</Link></li>
+                                {/* <li><Link to={"/research/"}>Research</Link></li> */}
                             </ul>
                         </li>
                         <li><Link to="/testimonials/"><span>Testimonials</span></Link></li>

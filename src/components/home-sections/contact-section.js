@@ -17,7 +17,7 @@ const ContactSection = () => {
         <MainSection id={"home_contact"}>
             <div class="main-col">
                 <div class="section-title" dangerouslySetInnerHTML={{ __html: data.queryContent.content}} />
-                <form name="Free Consultation Form" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
+                {/* <form name="Free Consultation Form" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
                     <input type="hidden" name="form-name" value="Free Consultation Form" aria-label="Input"/>
                     <div class="flex-form">
                         <div class="two-col">
@@ -35,7 +35,10 @@ const ContactSection = () => {
                             <button type="submit" name="submit" class={"submit"}  aria-label="Send">Schedule a Consultation</button>
                         </div>
                     </div>
-                </form>
+                </form> */}
+                <div class="schedule-button">
+                    <a href="https://calendly.com/ksmithdc" target="_blank">Schedule a Consultation</a>
+                </div>
             </div>
         </MainSection>
         
@@ -133,6 +136,29 @@ const MainSection = styled.section`
             }
         }
     }
+    .schedule-button {
+        width: 100%;
+        text-align: center;
+        a {
+            display: inline-block;
+            max-width: 320px;
+            text-decoration: none;
+            font-family: Roboto;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #fff;
+            background-color: #25afb4;
+            padding: 10px 50px;
+            border: 2px solid #25afb4;
+            border-radius: 50px;
+            transition-duration: .3s;
+            &:hover {
+                cursor: pointer;
+                color: #25afb4;
+                background-color: transparent;
+            }
+        }
+    }
     @media(max-width:1100px) {
         .main-col {
             max-width: 700px;
@@ -157,6 +183,12 @@ const MainSection = styled.section`
                     font-size: 18px;
                     padding: 10px 25px;
                 }
+            }
+        }
+        .schedule-button {
+            a {
+                font-size: 18px;
+                padding: 10px 25px;
             }
         }
     }

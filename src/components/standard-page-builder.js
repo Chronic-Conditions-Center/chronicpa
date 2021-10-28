@@ -1,7 +1,9 @@
 // src/components/standard-page-builder.js
 
 import React from "react"
+import AnchorButtons from "../layouts/AnchorButtons"
 import CallToAction from "../layouts/CallToAction"
+import ContactSection from "../layouts/ContactSection"
 import FullWidthSection from "../layouts/FullWidthSection"
 import GallerySlideshow from "../layouts/GallerySlideshow"
 import PageBanner from "../layouts/PageBanner"
@@ -25,6 +27,8 @@ const StandardPageBuilder = ({ layoutData }) => {
     Page_Custompagebuilder_PageBuilder_CallToAction: CallToAction,
     Page_Custompagebuilder_PageBuilder_TwoColumnsImage: TwoColSection,
     Page_Custompagebuilder_PageBuilder_GallerySlideshow: GallerySlideshow,
+    Page_Custompagebuilder_PageBuilder_AnchorButtons: AnchorButtons,
+    Page_Custompagebuilder_PageBuilder_ContactSection: ContactSection,
     page_default: Default
   }
 
