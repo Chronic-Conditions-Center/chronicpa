@@ -43,6 +43,11 @@ const BlockContent = styled.header`
     position: relative;
     z-index: 2;
   }
+  @media(max-width:767px) {
+    h1 {
+      font-size: 28px;
+    }
+  }
 `
 
 export default PageBanner

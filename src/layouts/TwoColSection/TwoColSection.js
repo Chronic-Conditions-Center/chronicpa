@@ -177,6 +177,93 @@ const BlockContent = styled.section`
   ul, ol {
       margin-left: 35px;
   }
+  @media(max-width:767px) {
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    p, li {
+      font-size: 18px;
+    }
+    ul, ol {
+      margin-left: 0;
+    }
+    .iframe-flex {
+      iframe {
+        padding: 10px 0;
+        max-width: 300px;
+        width: 100%;
+        height: 200px;
+      }
+    }
+    &.col-half {
+      > div {
+        flex-wrap: wrap;
+          > div:first-child {
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+          }
+          > div:last-child {
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+          }
+      }
+    }
+    &.col-one-third {
+      > div {
+        flex-wrap: wrap;
+          > div:first-child {
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+          }
+          > div:last-child {
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+          }
+      }
+    }
+    &.col-one-fourth {
+      > div {
+        flex-wrap: wrap;
+          > div:first-child {
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+          }
+          > div:last-child {
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+          }
+      }
+    }
+    &.image-right {
+      > div {
+          > div:first-child {
+              order: 1;
+          }
+          > div:last-child {
+              order: 2;
+          }
+      }
+    }
+    &.image-left {
+      > div {
+          > div:first-child {
+              order: 1;
+          }
+          > div:last-child {
+              order: 2;
+          }
+      }
+    }
+  }
 `
 
 export default TwoColSection

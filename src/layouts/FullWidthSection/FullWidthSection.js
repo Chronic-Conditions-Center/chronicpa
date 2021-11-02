@@ -65,8 +65,10 @@ const BlockContent = styled.section`
   }
   .flex-list {
     display: flex;
-    ul {
+    ul, ol {
       width: 50%;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
   .flex-col {
@@ -142,6 +144,47 @@ const BlockContent = styled.section`
   }
   ul, ol {
     margin-left: 35px;
+}
+@media(max-width:767px) {
+  h2 {
+    font-size: 28px;
+    overflow-wrap: break-word;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p, li {
+    font-size: 18px;
+  }
+  ul, ol {
+    margin-left: 0;
+  }
+  .flex-list {
+    flex-wrap: wrap;
+    ul, ol {
+      width: 100%;
+    }
+  }
+  .flex-col {
+    flex-wrap: wrap;
+    .col-half {
+      width: 100%;
+      &:first-child {
+        padding-right: 0px;
+      }
+      &:last-child {
+        padding-left: 0px;
+      }
+    }
+  }
+  .iframe-flex {
+    iframe {
+      padding: 10px 0;
+      max-width: 300px;
+      width: 100%;
+      height: 200px;
+    }
+  }
 }
 `
 

@@ -311,6 +311,55 @@ const BlockContent = styled.section`
   ul, ol {
     margin-left: 35px;
 }
+@media(max-width: 1000px) {
+  > div.contact-main {
+    .contact-info {
+      .flex-row {
+        flex-wrap: wrap;
+        .half-col {
+          width: 100%;
+          padding-left: 0px;
+          padding-right: 0px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+@media(max-width:767px) {
+  h2 {
+    font-size: 28px;
+    overflow-wrap: break-word;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p, li {
+    font-size: 18px;
+  }
+  ul, ol {
+    margin-left: 0;
+  }
+  > div.contact-main {
+    flex-wrap: wrap;
+    .contact-info {
+      width: 100%;
+      padding-right: 0px;
+    }
+    .contact-form {
+      width: 100%;
+      padding-left: 0px;
+      .flex-form {
+        .submit {
+          button {
+            font-size: 18px;
+            padding: 10px 25px;
+          }
+        }
+      }
+    }
+  }
+}
 `
 
 export default ContactSection

@@ -104,6 +104,17 @@ const BlockContent = styled.section`
     border-radius: 50px;
     transition-duration: .3s;
   }
+  @media(max-width:767px) {
+    h2 {
+      font-size: 28px;
+    }
+    p, li, a {
+      font-size: 18px;
+    }
+    a {
+      padding: 10px 25px;
+    }
+  }
 `
 
 export default CallToAction

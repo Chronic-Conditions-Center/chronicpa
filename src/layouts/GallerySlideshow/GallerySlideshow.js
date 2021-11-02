@@ -127,6 +127,9 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
         max-width: 1200px;
         width: 100%;
         margin: 0 auto;
+        .image-gallery {
+            width: 100%;
+        }
     }
     h2 {
         font-family: "Roboto Slab";
