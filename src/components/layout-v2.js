@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import PageTransition from 'gatsby-plugin-page-transitions'
-import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import "@fontsource/roboto"
 import "@fontsource/roboto/500.css"
@@ -45,7 +44,7 @@ class Layout extends Component {
 
                 <HeaderTop>
 
-                    <p><a href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>  <a href="https://calendly.com/ksmithdc" target="_blank" ><FaRegCalendarAlt size={18}/> Schedule a Consult</a></p>
+                    <p><a href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>  <a href="https://calendly.com/ksmithdc" target="_blank" rel="noreferrer"><FaRegCalendarAlt size={18}/> Schedule a Consult</a></p>
 
                 </HeaderTop>
 

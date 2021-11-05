@@ -12,11 +12,11 @@ const Footer = () => {
 
             <div class="flex-row">
                 <div class="flex-col">
-                    <h4>About Us</h4>
+                    <p class="footer-title">About Us</p>
                     <p>Chronic Conditions Center is the premier leader in integrated neurometabolic healthcare. We use FDA approved medical procedures for the treatment of peripheral neuropathy, joint pain and metabolic disorders.</p>
                 </div>
                 <div class="flex-col">
-                    <h4>Contact Info</h4>
+                    <p class="footer-title">Contact Info</p>
                     <p><FaPhone size={24}/>412-595-7332<br/>
                     <FaRegEnvelope size={24}/>info@chronicpa.com<br/>
                     <FaMapMarkerAlt/>1699 Washington Rd.<br/>
@@ -24,7 +24,7 @@ const Footer = () => {
                     Pittsburgh, PA 15228</p>
                 </div>
                 <div class="flex-col">
-                    <h4>Hours</h4>
+                    <p class="footer-title">Hours</p>
                     <p>Monday through Thursday<br/>
                     8:00 a.m. to 5:00 p.m.<br/>
                     by appointment only.</p>
@@ -55,15 +55,6 @@ const FooterMain = styled.footer`
         .flex-col {
             width: 33.33%;
             padding-right: 35px;
-            h4 {
-                font-family: "Roboto Slab";
-                font-weight: 400;
-                line-height: 1.4;
-                letter-spacing: 0px;
-                font-style: normal;
-                color: #fff;
-                margin-bottom: 30px;
-            }
             p {
                 font-family: Roboto;
                 font-size: 20px;
@@ -71,6 +62,15 @@ const FooterMain = styled.footer`
                 letter-spacing: 0px;
                 font-style: normal;
                 color: #fff;
+            }
+            p.footer-title {
+                font-family: "Roboto Slab";
+                font-weight: 400;
+                line-height: 1.4;
+                letter-spacing: 0px;
+                font-style: normal;
+                color: #fff;
+                margin-bottom: 30px;
             }
             svg {
                 margin-right: 20px;

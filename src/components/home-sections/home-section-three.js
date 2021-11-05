@@ -86,11 +86,11 @@ const MainSection = styled.section`
         display: inline-block;
         text-decoration: none;
         font-family: Roboto;
-        font-size: 20px;
+        font-size: 15px;
         line-height: 1.5;
         color: #25afb4;
         background-color: #fff;
-        padding: 10px 50px;
+        padding: 10px 25px;
         border: 2px solid #fff;
         border-radius: 50px;
         transition-duration: .3s;
@@ -134,9 +134,6 @@ const MainSection = styled.section`
         }
         p {
             font-size: 16px;
-        }
-        a {
-            font-size: 18px;
         }
     }
 `

@@ -1,9 +1,8 @@
 import React  from "react"
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
 
 import Layout from "../components/layout-v2"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import StandardPageBuilder from "../components/standard-page-builder"
 
 
@@ -13,7 +12,7 @@ const Page = ({ data: { page } }) => {
 
   return (
     <Layout>
-      <SEO 
+      <Seo 
       title={page.seo.title} 
       description={page.seo.metaDesc}
       metaImage={page.seo.opengraphImage.localFile.childImageSharp.fluid}
