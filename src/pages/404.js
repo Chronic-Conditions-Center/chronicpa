@@ -22,7 +22,7 @@ const NotFoundPage = () => {
 const MainSection = styled.section`
   max-width: 1200px;
   width: 100%;
-  padding: 3rem;
+  padding: 10rem 3rem;
   margin: 0 auto;
   text-align: center;
   h1 {
