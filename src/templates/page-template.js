@@ -122,20 +122,16 @@ export const pageQuery = graphql`
                 sourceUrl
                 original: localFile {
                   childImageSharp {
-                    gatsbyImageData (
-                        width: 1200
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                    )
+                    fluid(maxWidth: 1200) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
                 thumbnail: localFile {
                   childImageSharp {
-                    gatsbyImageData (
-                        width: 250
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                    )
+                    fluid(maxWidth: 300) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }

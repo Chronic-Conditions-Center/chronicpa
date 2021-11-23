@@ -18,7 +18,7 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
       }}
       >
         <div class="gallery-row">
-            <ImageGallery items={galleryMap.map(item => ({ original: item.sourceUrl , thumbnail: item.sourceUrl }))}/>
+            <ImageGallery items={galleryMap.map(item => ({ original: item.original.childImageSharp.fluid.src , thumbnail: item.thumbnail.childImageSharp.fluid.src }))}/>
         </div>
       </BlockContent>
     )
