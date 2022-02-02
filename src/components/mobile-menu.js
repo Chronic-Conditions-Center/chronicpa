@@ -65,14 +65,15 @@ class MobileMenu extends Component {
             <MobileMenuFull id={"mobileMenu"}>      
                 <MainMobileMenu id={"mainMobileMenu"}>
                     <ul>
-                        <li className={aboutMenu} onClick={() => this.toggleAboutMenu()} >
+                        <li><Link to={"/history/"}>About Us</Link></li>
+                        {/* <li className={aboutMenu} onClick={() => this.toggleAboutMenu()} >
                             <span>About Us</span>
                             <FaChevronDown size={14}/>
                             <ul class="subMenu">
                                 <li><Link to={"/history/"}>History</Link></li>
                                 <li><Link to={"/team/"}>Team</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li className={conditionsMenu} onClick={() => this.toggleConditionsMenu()} >
                             <span>Conditions </span>
                             <FaChevronDown size={14}/>
@@ -97,13 +98,13 @@ class MobileMenu extends Component {
                             <span>Services </span>
                             <FaChevronDown size={14}/>
                             <ul class="subMenu">
-                                <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li>
-                                <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li>
-                                <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li>
+                                {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li> */}
+                                {/* <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li> */}
+                                {/* <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
                                 <li><Link to={"/laser/"}>Laser</Link></li>
                                 <li><Link to={"/spinal-decompression/"}>Spinal Decompression</Link></li>
                                 <li><Link to={"/shockwave-therapy/"}>Shockwave Therapy</Link></li>
-                                <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li>
+                                {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                             </ul>
                         </li>
                         <li><Link to="/contact/"><span>Contact</span></Link></li>
