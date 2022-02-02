@@ -9,12 +9,13 @@ const HeaderMenu = () => {
     return(
         <MainNav>
             <ul class="main-menu">
-                <li class={"has-submenu"}>About Us <FaChevronDown size={12}/>
+                <li><Link to={"/history/"}>About Us</Link></li>
+                {/* <li class={"has-submenu"}>About Us <FaChevronDown size={12}/>
                     <ul class="submenu">
                         <li><Link to={"/history/"}>History</Link></li>
                         <li><Link to={"/team/"}>Team</Link></li>
                     </ul>
-                </li>
+                </li> */}
                 <li class={"has-submenu"}>Conditions <FaChevronDown size={12}/>
                     <ul class="submenu">
                         <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
@@ -33,13 +34,13 @@ const HeaderMenu = () => {
                 <li><Link to={"/testimonials/"}>Testimonials</Link></li>
                 <li class={"has-submenu"}>Services <FaChevronDown size={12}/>
                     <ul class="submenu">
-                        <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li>
-                        <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li>
-                        <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li>
+                        {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li> */}
+                        {/* <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li> */}
+                        {/* <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
                         <li><Link to={"/laser/"}>Laser</Link></li>
                         <li><Link to={"/spinal-decompression/"}>Spinal Decompression</Link></li>
                         <li><Link to={"/shockwave-therapy/"}>Shockwave Therapy</Link></li>
-                        <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li>
+                        {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                     </ul>
                 </li>
                 <li><Link to={"/contact/"}>Contact</Link></li>
