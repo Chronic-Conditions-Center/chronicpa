@@ -78,7 +78,15 @@ module.exports = {
         icon: `content/assets/ccc-favicon.png`,
       },
     },
-
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-463LVF4K0L", // Google Analytics / GA
+        ],
+      },
+    },
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
 
