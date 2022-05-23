@@ -33,6 +33,25 @@ const BlockContent = styled.section`
     hr {
       background-color: #25afb4;
     }
+    .button-row {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 10px 50px;
+        border: 2px solid #25afb4;
+        background-color: #25afb4;
+        color: #fff;
+        border-radius: 50px;
+        transition-duration: .3s;
+        &:hover {
+          background-color: #fff;
+          color: #25afb4;
+        }
+      }
+    }
   }
   &.color-gray {
     background-color: #f1f1f1;
@@ -41,6 +60,25 @@ const BlockContent = styled.section`
     }
     hr {
       background-color: #25afb4;
+    }
+    .button-row {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 10px 50px;
+        border: 2px solid #25afb4;
+        background-color: #25afb4;
+        color: #fff;
+        border-radius: 50px;
+        transition-duration: .3s;
+        &:hover {
+          background-color: #fff;
+          color: #25afb4;
+        }
+      }
     }
   }
   &.color-blue {
@@ -52,12 +90,29 @@ const BlockContent = styled.section`
       background-color: #fff;
     }
     a {
-        color: #25afb4;
-        background-color: #fff;
+        color: #fff;
         &:hover {
             color: #fff;
-            background-color: #25afb4;
         }
+    }
+    .button-row {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 10px 50px;
+        border: 2px solid #fff;
+        background-color: #fff;
+        color: #25afb4;
+        border-radius: 50px;
+        transition-duration: .3s;
+        &:hover {
+          background-color: #25afb4;
+          color: #fff;
+        }
+      }
     }
   }
   > div {
@@ -92,17 +147,6 @@ const BlockContent = styled.section`
     line-height: 1.5;
     margin-top: 0;
     margin-bottom: 20px;
-  }
-  a {
-    display: inline-block;
-    text-decoration: none;
-    font-family: Roboto;
-    font-size: 20px;
-    line-height: 1.5;
-    padding: 10px 50px;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    transition-duration: .3s;
   }
   @media(max-width:767px) {
     h2 {

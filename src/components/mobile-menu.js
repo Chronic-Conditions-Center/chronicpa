@@ -78,10 +78,28 @@ class MobileMenu extends Component {
                             <span>Conditions </span>
                             <FaChevronDown size={14}/>
                             <ul class="subMenu">
+                                <li><Link to={"/back-pain/"}>Back Pain</Link></li>
+                                <li><Link to={"/neck-pain/"}>Neck Pain</Link></li>
+                                <li><Link to={"/knee-pain-v2/"}>Knee Pain</Link></li>
                                 <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
-                                <li><Link to={"/knee-pain/"}>Knee Pain</Link></li>
-                                <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li>
-                                <li><Link to={"/thyroid/"}>Thyroid</Link></li>
+                                {/* <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li> */}
+                                <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li>
+                            </ul>
+                        </li>
+                        <li className={servicesMenu} onClick={() => this.toggleServicesMenu()} >
+                            <span>Services </span>
+                            <FaChevronDown size={14}/>
+                            <ul class="subMenu">
+                                {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li> */}
+                                {/* <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li> */}
+                                {/* <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
+                                <li><Link to={"/chiropractic/"}>Chiropractic</Link></li>
+                                <li><Link to={"/weight-loss/"}>Weight Loss</Link></li>
+                                <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
+                                <li><Link to={"/laser/"}>Laser</Link></li>
+                                <li><Link to={"/spinal-decompression/"}>Spinal Decompression</Link></li>
+                                <li><Link to={"/shockwave-therapy/"}>Shockwave Therapy</Link></li>
+                                {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                             </ul>
                         </li>
                         <li className={resourcesMenu} onClick={() => this.toggleResourcesMenu()} >
@@ -94,19 +112,6 @@ class MobileMenu extends Component {
                             </ul>
                         </li>
                         <li><Link to="/testimonials/"><span>Testimonials</span></Link></li>
-                        <li className={servicesMenu} onClick={() => this.toggleServicesMenu()} >
-                            <span>Services </span>
-                            <FaChevronDown size={14}/>
-                            <ul class="subMenu">
-                                {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li> */}
-                                {/* <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li> */}
-                                {/* <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
-                                <li><Link to={"/laser/"}>Laser</Link></li>
-                                <li><Link to={"/spinal-decompression/"}>Spinal Decompression</Link></li>
-                                <li><Link to={"/shockwave-therapy/"}>Shockwave Therapy</Link></li>
-                                {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
-                            </ul>
-                        </li>
                         <li><Link to="/contact/"><span>Contact</span></Link></li>
                     </ul>
                 </MainMobileMenu>

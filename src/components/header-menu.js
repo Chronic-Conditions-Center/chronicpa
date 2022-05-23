@@ -18,10 +18,26 @@ const HeaderMenu = () => {
                 </li> */}
                 <li class={"has-submenu"}>Conditions <FaChevronDown size={12}/>
                     <ul class="submenu">
+                        <li><Link to={"/back-pain/"}>Back Pain</Link></li>
+                        <li><Link to={"/neck-pain/"}>Neck Pain</Link></li>
+                        <li><Link to={"/knee-pain-v2/"}>Knee Pain</Link></li>
                         <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
-                        <li><Link to={"/knee-pain/"}>Knee Pain</Link></li>
-                        <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li>
-                        <li><Link to={"/thyroid/"}>Thyroid</Link></li>
+                        {/* <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li> */}
+                        <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li>
+                    </ul>
+                </li>
+                <li class={"has-submenu"}>Services <FaChevronDown size={12}/>
+                    <ul class="submenu">
+                        {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li> */}
+                        {/* <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li> */}
+                        {/* <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
+                        <li><Link to={"/chiropractic/"}>Chiropractic</Link></li>
+                        <li><Link to={"/weight-loss/"}>Weight Loss</Link></li>
+                        <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
+                        <li><Link to={"/laser/"}>Laser</Link></li>
+                        <li><Link to={"/spinal-decompression/"}>Spinal Decompression</Link></li>
+                        <li><Link to={"/shockwave-therapy/"}>Shockwave Therapy</Link></li>
+                        {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                     </ul>
                 </li>
                 <li class={"has-submenu"}>Patient Resources <FaChevronDown size={12}/>
@@ -32,17 +48,6 @@ const HeaderMenu = () => {
                     </ul>
                 </li>
                 <li><Link to={"/testimonials/"}>Testimonials</Link></li>
-                <li class={"has-submenu"}>Services <FaChevronDown size={12}/>
-                    <ul class="submenu">
-                        {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li> */}
-                        {/* <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li> */}
-                        {/* <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
-                        <li><Link to={"/laser/"}>Laser</Link></li>
-                        <li><Link to={"/spinal-decompression/"}>Spinal Decompression</Link></li>
-                        <li><Link to={"/shockwave-therapy/"}>Shockwave Therapy</Link></li>
-                        {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
-                    </ul>
-                </li>
                 <li><Link to={"/contact/"}>Contact</Link></li>
             </ul>
         </MainNav>
@@ -63,7 +68,7 @@ const MainNav = styled.nav`
             color: #4c5166;
             font-family: "Roboto Slab";
             font-weight: 700;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 4;
             letter-spacing: 1px;
             padding-right: 35px;
@@ -77,7 +82,7 @@ const MainNav = styled.nav`
                 color: #4c5166;
                 font-family: "Roboto Slab";
                 font-weight: 700;
-                font-size: 14px;
+                font-size: 16px;
                 letter-spacing: 1px;
                 font-style: normal;
                 text-decoration: none;
@@ -127,6 +132,16 @@ const MainNav = styled.nav`
                 > ul.submenu {
                     opacity: 1;
                     visibility: visible;
+                }
+            }
+        }
+    }
+    @media(max-width: 1180px) {
+        ul.main-menu {
+            li {
+                font-size: 14px;
+                a {
+                    font-size: 14px;
                 }
             }
         }

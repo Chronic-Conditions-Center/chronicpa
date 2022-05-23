@@ -102,6 +102,7 @@ const HeaderTop = styled.div`
     position: relative;
     p {
         font-family: "Roboto";
+        font-size: 20px;
         font-weight: 500;
         color: #fff;
         text-align: center;
