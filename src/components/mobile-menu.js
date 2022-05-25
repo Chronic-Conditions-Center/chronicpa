@@ -207,7 +207,7 @@ const MainMobileMenu = styled.nav`
                     opacity: 1;
                     visibility: visible;
                     padding: 10px 0;
-                    max-height: 200px;
+                    max-height: 260px;
                 }
             }
         }
