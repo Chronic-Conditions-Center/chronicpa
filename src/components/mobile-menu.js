@@ -98,7 +98,7 @@ class MobileMenu extends Component {
                                 <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
                                 <li><Link to={"/laser/"}>Laser</Link></li>
                                 <li><Link to={"/spinal-decompression/"}>Spinal Decompression</Link></li>
-                                <li><Link to={"/shockwave-therapy/"}>Shockwave Therapy</Link></li>
+                                <li><Link to={"/pulsewave-therapy/"}>Pulsewave Therapy</Link></li>
                                 {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                             </ul>
                         </li>

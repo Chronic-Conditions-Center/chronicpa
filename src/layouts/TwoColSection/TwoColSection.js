@@ -177,7 +177,7 @@ const BlockContent = styled.section`
   ul, ol {
       margin-left: 35px;
   }
-  @media(max-width:767px) {
+  @media(max-width:991px) {
     h2 {
       font-size: 28px;
     }
