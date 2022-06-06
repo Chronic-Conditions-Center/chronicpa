@@ -89,7 +89,7 @@ const SliderMain = styled.section`
                     font-family: Roboto;
                     font-size: 60px;
                     font-weight: 100;
-                    line-height: 1.5;
+                    line-height: 1.2;
                     color: #fff;
                     text-shadow: 2px 2px 4px rgba(0,0,0,.8);
                     transition-duration: .3s;
