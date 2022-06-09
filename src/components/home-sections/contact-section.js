@@ -37,7 +37,7 @@ const ContactSection = () => {
                     </div>
                 </form> */}
                 <div class="schedule-button">
-                    <a href="https://calendly.com/ksmithdc" target="_blank" rel="noreferrer">Schedule a Consultation</a>
+                    <a href="tel:+14125957332">Schedule a Consultation</a>
                 </div>
             </div>
         </MainSection>
