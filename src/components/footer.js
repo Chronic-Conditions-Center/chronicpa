@@ -4,6 +4,11 @@ import styled from 'styled-components'
 import { FaPhone } from 'react-icons/fa';
 import { FaRegEnvelope } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebookF } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaPinterestP } from 'react-icons/fa';
 
 const Footer = () => {
 
@@ -28,6 +33,14 @@ const Footer = () => {
                     <p>Monday through Thursday<br/>
                     8:00 a.m. to 5:00 p.m.<br/>
                     by appointment only.</p>
+                    <p class="footer-title">Follow Us</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/cccpa1" target="_blank"><FaFacebookF size={24}/></a>
+                        <a href="https://www.instagram.com/kevinsmithdc" target="_blank"><FaInstagram size={24}/></a>
+                        <a href="https://www.youtube.com/c/KevinSmithdc" target="_blank"><FaYoutube size={24}/></a>
+                        <a href="https://www.linkedin.com/in/ksmithdc/" target="_blank"><FaLinkedin size={24}/></a>
+                        <a href="https://www.pinterest.com/ksmithdc/_saved/" target="_blank"><FaPinterestP size={24}/></a>
+                    </div>
                 </div>
             </div>
 
