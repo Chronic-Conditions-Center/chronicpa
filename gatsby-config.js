@@ -12,6 +12,7 @@ module.exports = {
     description: `Located in Pittsburgh, Chronic Conditions Center provides solutions to neuropathy, knee pain and spinal problems. Call us today for a free consultation.`,
     author: `Chronic Conditions Center`,
     siteUrl: `https://chronicpa.com`,
+    keywords: `Pittsburgh Chiropractors, pgh chiropractors, Chiropractors in Pittsburgh, Best Chiropractors in Pittsburgh, Chiropractor near me, Chiropractic care, Chiropractic clinic, Chiropractic Clinic Pittsburgh, Chiropractor Mt Lebanon, Chiropractor 15228`,
   },
   /**
    * Adding plugins to this array adds them to your Gatsby site.

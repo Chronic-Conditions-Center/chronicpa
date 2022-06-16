@@ -10,7 +10,7 @@
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
  
- const SEO = ({ description, lang, meta, title, metaImage }) => {
+ const SEO = ({ description, keywords, lang, meta, title, metaImage }) => {
    const { site } = useStaticQuery(
      graphql`
        query {
@@ -20,6 +20,7 @@
              description
              author
              siteUrl
+             keywords
            }
          }
        }
@@ -27,6 +28,7 @@
    )
  
    const metaDescription = description || site.siteMetadata?.description
+   const metaKeywords = keywords || site.siteMetadata?.keywords
    const og_image =
      metaImage && metaImage.src
        ? `${site.siteMetadata.siteUrl}${metaImage.src}`
@@ -46,6 +48,10 @@
          {
            name: `description`,
            content: metaDescription,
+         },
+         {
+          name: `keywords`,
+          content: metaKeywords,
          },
          {
            property: `og:title`,
