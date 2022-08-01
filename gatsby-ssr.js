@@ -1,6 +1,6 @@
 import React from "react";
 
-export function onRenderBody({ setHeadComponents }) {
+export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
  setHeadComponents([
     <script type="application/ld+json"
         dangerouslySetInnerHTML={{
