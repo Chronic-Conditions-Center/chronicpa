@@ -22,11 +22,11 @@ const Footer = () => {
                 </div>
                 <div class="flex-col">
                     <p class="footer-title">Contact Info</p>
-                    <p><FaPhone size={24}/>412-595-7332<br/>
-                    <FaRegEnvelope size={24}/>info@chronicpa.com<br/>
-                    <FaMapMarkerAlt/>1699 Washington Rd.<br/>
+                    <p><a href="tel:+14125957332"><FaPhone size={24}/>412-595-7332</a><br/>
+                    <a href="mailto:info@chronicpa.com"><FaRegEnvelope size={24}/>info@chronicpa.com</a><br/>
+                    <a href="https://g.page/cccpa1?share" target="_blank"><FaMapMarkerAlt/>1699 Washington Rd.<br/>
                     Suite 401<br/>
-                    Pittsburgh, PA 15228</p>
+                    Pittsburgh, PA 15228</a></p>
                 </div>
                 <div class="flex-col">
                     <p class="footer-title">Hours</p>
@@ -75,6 +75,10 @@ const FooterMain = styled.footer`
                 letter-spacing: 0px;
                 font-style: normal;
                 color: #fff;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
             }
             p.footer-title {
                 font-family: "Roboto Slab";
