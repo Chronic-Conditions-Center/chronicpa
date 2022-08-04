@@ -75,6 +75,7 @@ const MainNav = styled.nav`
             margin-bottom: 0;
             position: relative;
             overflow: hidden;
+            transition-duration: .5s;
             &:last-child {
                 padding-right: 0;
             }
@@ -86,6 +87,7 @@ const MainNav = styled.nav`
                 letter-spacing: 1px;
                 font-style: normal;
                 text-decoration: none;
+                transition-duration: .5s;
             }
             > ul.submenu {
                 position: absolute;

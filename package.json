@@ -33,6 +33,7 @@
     "gatsby-source-wordpress": "^5.14.2",
     "gatsby-transformer-sharp": "^3.14.0",
     "gatsby-transformer-sqip": "^3.14.3",
+    "gsap": "^3.10.4",
     "html-react-parser": "^1.4.14",
     "lodash": "^4.17.21",
     "mitt": "^3.0.0",
