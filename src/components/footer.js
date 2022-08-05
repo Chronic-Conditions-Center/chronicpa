@@ -42,10 +42,14 @@ const Footer = () => {
                         <a href="https://www.pinterest.com/ksmithdc/_saved/" target="_blank"><FaPinterestP size={24}/></a>
                     </div>
                 </div>
+                <div class="flex-col">
+                    <p class="footer-title">Our Location</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.6932179464447!2d-80.051309!3d40.349151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f99c7d96e10d%3A0x302207661968f10f!2sChronic%20Conditions%20Center!5e0!3m2!1sen!2smx!4v1659712062695!5m2!1sen!2smx" width="100%" height="250" style={{border: '0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© Copyright 2012 - 2021   |   CHRONIC PA   |   ALL RIGHTS RESERVED</p>
+                <p>© Copyright 2012 - 2022   |   CHRONIC PA   |   ALL RIGHTS RESERVED</p>
             </div>
 
         </FooterMain>
@@ -59,14 +63,14 @@ const FooterMain = styled.footer`
     border-top: 20px solid #222222;
     background-color: #000000;
     .flex-row {
-        max-width: 1180px;
+        max-width: 1380px;
         width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         .flex-col {
-            width: 33.33%;
+            width: 25%;
             padding-right: 35px;
             p {
                 font-family: Roboto;
@@ -126,6 +130,9 @@ const FooterMain = styled.footer`
                 width: 100%;
                 padding-right: 0;
                 text-align: center;
+                .footer-socials {
+                    margin-bottom: 50px;
+                }
             }
         }
     }
