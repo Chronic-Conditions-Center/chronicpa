@@ -1,6 +1,6 @@
 import React from "react";
 
-export function onRenderBody({ setHeadComponents, setPreBodyComponents, setPostBodyComponents }) {
+export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
  setHeadComponents([
     <script type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -52,10 +52,6 @@ export function onRenderBody({ setHeadComponents, setPreBodyComponents, setPostB
         `
         }}
     ></script>,
-  ]);
-
-  setPreBodyComponents([
-    <link rel="canonical" href="https://chronicpa.com/" />,
   ]);
 
   setPostBodyComponents([
