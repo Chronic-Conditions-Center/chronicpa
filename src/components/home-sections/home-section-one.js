@@ -2,11 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-const HomeSectionTwo = () => {
+const HomeSectionOne = () => {
 
     const data = useStaticQuery(graphql`
         query {
-            queryContent: wpHomeSection(databaseId: {eq: 16}) {
+            queryContent: wpHomeSection(databaseId: {eq: 629}) {
                 content
             }
         }
@@ -29,15 +29,23 @@ const MainSection = styled.div`
         max-width: 1180px;
         margin: 0 auto;
     }
+    hr {
+        background-color: #25afb4;
+        margin: 20px 0;
+        max-width: 100px;
+        width: 100%;
+        height: 2px;
+    }
     h2 {
         font-family: "Roboto Slab";
-        font-size: 40px;
+        font-size: 28px;
         font-weight: 700;
         line-height: 1.3;
         letter-spacing: 2px;
         font-style: normal;
         color: #000;
         margin-top: 0;
+        margin-bottom: 20px;
         transition-duration: .3s;
     }
     p, ol {
@@ -53,14 +61,8 @@ const MainSection = styled.div`
         margin-left: 50px;
     }
     @media(max-width:1100px) {
-        text-align: center;
-        > div {
-            max-width: 700px;
-            width: 100%;
-            margin: 0 auto;
-        }
         h2 {
-            font-size: 32px;
+            font-size: 24px;
         }
         ol {
             margin-left: 0;
@@ -71,7 +73,7 @@ const MainSection = styled.div`
     }
     @media(max-width:767px) {
         h2 {
-            font-size: 28px;
+            font-size: 20px;
         }
         p, ol {
             font-size: 18px;
@@ -79,4 +81,4 @@ const MainSection = styled.div`
     }
 `
 
-export default HomeSectionTwo
+export default HomeSectionOne

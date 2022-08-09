@@ -60,7 +60,8 @@ const TestimonialSliderV2 = () => {
 const MainSection = styled.div`
     position: relative;
     padding: 50px;
-    padding-top: 70px;
+    padding-top: 120px;
+    background-color: #25afb4;
     .testimonial-link {
         width: 100%;
         text-align: center;
@@ -71,22 +72,22 @@ const MainSection = styled.div`
             font-family: Roboto;
             font-size: 20px;
             line-height: 1.5;
-            color: #fff;
-            background-color: #25afb4;
+            color: #25afb4;
+            background-color: #fff;
             padding: 10px 50px;
-            border: 2px solid #25afb4;
+            border: 2px solid #fff;
             border-radius: 50px;
             transition-duration: .3s;
             &:hover {
                 cursor: pointer;
-                color: #25afb4;
-                background-color: transparent;
+                color: #fff;
+                background-color: #25afb4;
             }
         }
     }
     svg {
         position: absolute;
-        top: 0;
+        top: 50px;
         left: calc(50% - 22px);
         padding: 5px;
         background-color: #25afb4;
@@ -95,8 +96,6 @@ const MainSection = styled.div`
         fill: #fff;
     }
     @media(max-width:767px) {
-        padding-left: 0;
-        padding-right: 0;
         .testimonial-link {
             a {
                 font-size: 18px;
@@ -107,6 +106,8 @@ const MainSection = styled.div`
 
 const SliderContainer = styled.div`
     position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
     @media(max-width:1100px) {
         max-width: 700px;
         width: 100%;
@@ -121,7 +122,7 @@ const TestimonialSlide = styled.div`
         font-size: 18px;
         font-weight: 400;
         font-style: italic;
-        color: #000;
+        color: #fff;
         opacity: .7;
         transition-duration: .3s;
     }
@@ -132,7 +133,7 @@ const TestimonialSlide = styled.div`
         line-height: 1.3;
         letter-spacing: 2px;
         font-style: normal;
-        color: #000;
+        color: #fff;
         opacity: .9;
         transition-duration: .3s;
     }

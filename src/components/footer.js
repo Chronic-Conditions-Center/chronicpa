@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from 'styled-components'
 
 import { FaPhone } from 'react-icons/fa';
@@ -49,7 +50,7 @@ const Footer = () => {
             </div>
 
             <div class="footer-bottom">
-                <p>© Copyright 2012 - 2022   |   CHRONIC PA   |   ALL RIGHTS RESERVED</p>
+                <p>© Copyright 2012 - 2022   |   CHRONIC PA   |   ALL RIGHTS RESERVED  |  <Link to={"/site-map/"}>Sitemap</Link></p>
             </div>
 
         </FooterMain>
@@ -105,12 +106,13 @@ const FooterMain = styled.footer`
         width: 100%;
         margin: 0 auto;
         margin-top: 30px;
-        p {
+        p, a {
             font-family: Roboto;
             color: #aaaaaa;
             font-size: 14px;
             font-weight: 500;
             text-align: center;
+            text-decoration: none;
         }
     }
     @media(max-width:1100px) {
