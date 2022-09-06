@@ -17,11 +17,17 @@ const HeaderMenu = () => {
                     </ul>
                 </li> */}
                 <li class={"has-submenu"}>Conditions <FaChevronDown size={12}/>
-                    <ul class="submenu">
+                    <ul class="submenu large">
                         <li><Link to={"/back-pain/"}>Back Pain</Link></li>
                         <li><Link to={"/neck-pain/"}>Neck Pain</Link></li>
+                        <li><Link to={"/hip-pain-chiropractor/"}>Hip Pain</Link></li>
                         <li><Link to={"/knee-pain-v2/"}>Knee Pain</Link></li>
+                        <li><Link to={"/foot-pain-chiropractor/"}>Foot Pain</Link></li>
+                        <li><Link to={"/numbness-tingling/"}>Numbness/Tingling</Link></li>
+                        <li><Link to={"/chiropractic-for-herniated-discs/"}>Herniated Disc</Link></li>
                         <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
+                        <li><Link to={"/sciatica-treatment/"}>Sciatica</Link></li>
+                        <li><Link to={"/scoliosis-chiropactic/"}>Scoliosis</Link></li>
                         {/* <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li> */}
                         <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li>
                     </ul>
@@ -125,6 +131,14 @@ const MainNav = styled.nav`
                         &:hover {
                             background-color: #f8f8f8;
                         }
+                    }
+                }
+                &.large {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 480px;
+                    li {
+                        width: 50%;
                     }
                 }
             }
