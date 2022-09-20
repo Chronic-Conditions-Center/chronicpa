@@ -45,10 +45,10 @@ class MobileMenu extends Component {
     }
 
     render() {
-        let aboutMenu = "aboutMenu";
-        if (this.state.aboutOpen) {
-          aboutMenu += ' subMenuOpen';
-        }
+        // let aboutMenu = "aboutMenu";
+        // if (this.state.aboutOpen) {
+        //   aboutMenu += ' subMenuOpen';
+        // }
         let conditionsMenu = "conditionsMenu";
         if (this.state.conditionsOpen) {
           conditionsMenu += ' subMenuOpen';
@@ -80,6 +80,7 @@ class MobileMenu extends Component {
                             <ul class="subMenu">
                                 <li><Link to={"/back-pain/"}>Back Pain</Link></li>
                                 <li><Link to={"/neck-pain/"}>Neck Pain</Link></li>
+                                <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li>
                                 <li><Link to={"/hip-pain-chiropractor/"}>Hip Pain</Link></li>
                                 <li><Link to={"/knee-pain-v2/"}>Knee Pain</Link></li>
                                 <li><Link to={"/foot-pain-chiropractor/"}>Foot Pain</Link></li>
@@ -88,17 +89,17 @@ class MobileMenu extends Component {
                                 <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
                                 <li><Link to={"/sciatica-treatment/"}>Sciatica</Link></li>
                                 <li><Link to={"/scoliosis-chiropactic/"}>Scoliosis</Link></li>
-                                {/* <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li> */}
                                 <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li>
+                                <li><Link to={"/thyroid/"}>Low Thyroid</Link></li>
                             </ul>
                         </li>
                         <li className={servicesMenu} onClick={() => this.toggleServicesMenu()} >
                             <span>Services </span>
                             <FaChevronDown size={14}/>
                             <ul class="subMenu">
-                                {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li> */}
-                                {/* <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li> */}
-                                {/* <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
+                                <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li>
+                                <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li>
+                                <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li>
                                 <li><Link to={"/chiropractic/"}>Chiropractic</Link></li>
                                 <li><Link to={"/weight-loss/"}>Weight Loss</Link></li>
                                 <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
@@ -213,7 +214,7 @@ const MainMobileMenu = styled.nav`
                     opacity: 1;
                     visibility: visible;
                     padding: 10px 0;
-                    max-height: 400px;
+                    max-height: 600px;
                 }
             }
         }

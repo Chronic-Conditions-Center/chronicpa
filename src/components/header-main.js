@@ -220,7 +220,8 @@ const HeaderMain = styled.div`
             }
         }
         .mobile-menu {
-            max-height: 800px;
+            max-height: 600px;
+            overflow-y: scroll;
         }
     }
     @media(max-width:1100px) {
