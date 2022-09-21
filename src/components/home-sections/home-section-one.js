@@ -36,6 +36,7 @@ const MainSection = styled.div`
         width: 100%;
         height: 2px;
     }
+    h1,
     h2 {
         font-family: "Roboto Slab";
         font-size: 28px;

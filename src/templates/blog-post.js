@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 import parse from "html-react-parser"
+import styled from 'styled-components'
 
 // We're using Gutenberg so we need the block styles
 // these are copied into this project due to a conflict in the postCSS
@@ -25,67 +26,96 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     <Layout>
       <Seo title={post.title} description={post.excerpt} />
 
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{parse(post.title)}</h1>
-
-          <p>{post.date}</p>
-
-          {/* if we have a featured image for this post let's display it */}
-          {featuredImage?.fluid && (
-            <Image
-              fluid={featuredImage.fluid}
-              alt={featuredImage.alt}
-              style={{ marginBottom: 50 }}
-            />
-          )}
-        </header>
-
-        {!!post.content && (
-          <section itemProp="articleBody">{parse(post.content)}</section>
-        )}
-
-        <hr />
-
-        <footer>
-          <Bio />
-        </footer>
-      </article>
-
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
+      <MainBlog>
+        <article
+          className="blog-post"
+          itemScope
+          itemType="http://schema.org/Article"
         >
-          <li>
-            {previous && (
-              <Link to={previous.uri} rel="prev">
-                ← {parse(previous.title)}
-              </Link>
-            )}
-          </li>
+          <header>
+            <h1 itemProp="headline">{parse(post.title)}</h1>
 
-          <li>
-            {next && (
-              <Link to={next.uri} rel="next">
-                {parse(next.title)} →
-              </Link>
+            <p>{post.date}</p>
+
+            {/* if we have a featured image for this post let's display it */}
+            {featuredImage?.fluid && (
+              <Image
+                fluid={featuredImage.fluid}
+                alt={featuredImage.alt}
+                style={{ marginBottom: 50 }}
+              />
             )}
-          </li>
-        </ul>
-      </nav>
+          </header>
+
+          {!!post.content && (
+            <section itemProp="articleBody">{parse(post.content)}</section>
+          )}
+
+          <hr />
+
+        </article>
+
+        <nav className="blog-post-nav">
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={previous.uri} rel="prev">
+                  ← {parse(previous.title)}
+                </Link>
+              )}
+            </li>
+
+            <li>
+              {next && (
+                <Link to={next.uri} rel="next">
+                  {parse(next.title)} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </nav>
+      </MainBlog>
+
     </Layout>
   )
 }
+
+
+const MainBlog = styled.section`
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  h1,
+  h2 {
+    font-family: "Roboto Slab";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    font-style: normal;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    transition-duration: .3s;
+  }
+  p, ol {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-style: normal;
+    line-height: 1.3;
+    color: #000;
+  }
+`
 
 export default BlogPostTemplate
 
