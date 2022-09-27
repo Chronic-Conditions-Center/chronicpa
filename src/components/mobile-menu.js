@@ -89,7 +89,7 @@ class MobileMenu extends Component {
                                 <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
                                 <li><Link to={"/sciatica-treatment/"}>Sciatica</Link></li>
                                 <li><Link to={"/scoliosis-chiropactic/"}>Scoliosis</Link></li>
-                                <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li>
+                                {/* <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li> */}
                                 <li><Link to={"/thyroid/"}>Low Thyroid</Link></li>
                             </ul>
                         </li>
@@ -97,9 +97,9 @@ class MobileMenu extends Component {
                             <span>Services </span>
                             <FaChevronDown size={14}/>
                             <ul class="subMenu">
-                                <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li>
+                                {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li>
                                 <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li>
-                                <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li>
+                                <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
                                 <li><Link to={"/chiropractic/"}>Chiropractic</Link></li>
                                 <li><Link to={"/weight-loss/"}>Weight Loss</Link></li>
                                 <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
