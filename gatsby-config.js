@@ -109,6 +109,12 @@ module.exports = {
         id: "GTM-TBP8T4T",
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "631256545195880",
+      },
+    },
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
 
