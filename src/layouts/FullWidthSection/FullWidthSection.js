@@ -147,7 +147,7 @@ const BlockContent = styled.section`
   }
   a.button {
     display: inline-block;
-    max-width: 320px;
+    max-width: 420px;
     text-decoration: none;
     font-family: Roboto;
     font-size: 20px;
