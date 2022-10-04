@@ -144,6 +144,21 @@ const BlockContent = styled.section`
   }
   ul, ol {
     margin-left: 35px;
+  }
+  a.button {
+    display: inline-block;
+    max-width: 320px;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #25afb4;
+    padding: 10px 50px;
+    border: 2px solid #25afb4;
+    border-radius: 50px;
+    transition-duration: .3s;
+  }
 }
 @media(max-width:767px) {
   h2 {
