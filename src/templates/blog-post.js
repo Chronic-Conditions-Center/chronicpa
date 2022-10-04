@@ -4,15 +4,6 @@ import Image from "gatsby-image"
 import parse from "html-react-parser"
 import styled from 'styled-components'
 
-// We're using Gutenberg so we need the block styles
-// these are copied into this project due to a conflict in the postCSS
-// version used by the Gatsby and @wordpress packages that causes build
-// failures.
-// @todo update this once @wordpress upgrades their postcss version
-import "../css/@wordpress/block-library/build-style/style.css"
-import "../css/@wordpress/block-library/build-style/theme.css"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout-v2"
 import Seo from "../components/seo"
 
@@ -24,7 +15,11 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
   return (
     <Layout>
-      <Seo title={post.title} description={post.excerpt} />
+      <Seo 
+      title={post.seo.title} 
+      description={post.seo.metaDesc}
+      metaImage={post.seo.opengraphImage.localFile.childImageSharp.fluid}
+      />
 
       <MainBlog>
         <article
@@ -133,6 +128,19 @@ export const pageQuery = graphql`
       content
       title
       date(formatString: "MMMM DD, YYYY")
+      seo {
+        title
+        metaDesc
+        opengraphImage {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
 
       featuredImage {
         node {
