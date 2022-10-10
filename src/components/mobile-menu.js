@@ -103,11 +103,11 @@ class MobileMenu extends Component {
                                 <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li>
                                 <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
                                 <li><Link to={"/chiropractic/"}>Chiropractic</Link></li>
+                                <li><Link to={"/spinal-decompression/"}>Decompression</Link></li>
+                                <li><Link to={"/laser/"}>Laser</Link></li>
+                                <li><Link to={"/pulsewave-therapy/"}>Pulsewave</Link></li>
                                 <li><Link to={"/weight-loss/"}>Weight Loss</Link></li>
                                 <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
-                                <li><Link to={"/laser/"}>Laser</Link></li>
-                                <li><Link to={"/spinal-decompression/"}>Decompression</Link></li>
-                                <li><Link to={"/pulsewave-therapy/"}>Pulsewave</Link></li>
                                 {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                             </ul>
                         </li>
@@ -117,6 +117,7 @@ class MobileMenu extends Component {
                             <ul class="subMenu">
                                 <li><Link to={"/new-patients/"}>New Patients</Link></li>
                                 <li><Link to={"/tour-of-the-office/"}>Tour of the Office</Link></li>
+                                <li><Link to={"/blog/"}>Blog</Link></li>
                                 {/* <li><Link to={"/research/"}>Research</Link></li> */}
                             </ul>
                         </li>

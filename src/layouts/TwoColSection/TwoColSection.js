@@ -188,7 +188,10 @@ const BlockContent = styled.section`
       font-size: 18px;
     }
     ul, ol {
-      margin-left: 0;
+      margin-left: 20px;
+      li {
+        list-style-position: outside;
+      }
     }
     .iframe-flex {
       iframe {
