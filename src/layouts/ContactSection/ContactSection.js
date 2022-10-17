@@ -3,6 +3,7 @@
 import React from "react"
 import styled from 'styled-components'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Helmet } from 'react-helmet'
 
 import { FaPhone } from 'react-icons/fa';
 import { FaFax } from 'react-icons/fa';
@@ -20,6 +21,9 @@ const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadd
       id={contactSectionId}
       className={`color-${contactColorScheme}`}
       >
+        <Helmet>
+          <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
+        </Helmet>
         <div 
         class="contact-main"
         style={{
@@ -36,7 +40,7 @@ const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadd
                     <div class="half-col">
                         <div dangerouslySetInnerHTML={{__html: contactAddress}} />
                         <div class="contact-links">
-                            <a href={contactPhoneLink}><FaPhone size={20}/> {contactPhoneLabel}</a>
+                            <a id="contact_phone_link" href={contactPhoneLink}><FaPhone size={20}/> {contactPhoneLabel}</a>
                             <a href={contactFaxLink}><FaFax size={20}/> {contactFaxLabel}</a>
                             <a href={`mailto:${contactEmail}`}><FaEnvelope size={20}/> {contactEmail}</a>
                             <a href={contactDirectionsLink} target="_blank" rel="noreferrer"><FaStreetView size={20}/> Get Directions</a>

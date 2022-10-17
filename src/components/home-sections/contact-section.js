@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet'
 
 const ContactSection = () => {
 
@@ -15,6 +16,9 @@ const ContactSection = () => {
     return(
 
         <MainSection id={"home_contact"}>
+            <Helmet>
+                <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
+            </Helmet>
             <div class="main-col">
                 <div class="section-title" dangerouslySetInnerHTML={{ __html: data.queryContent.content}} />
                 {/* <form name="Free Consultation Form" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
@@ -37,7 +41,7 @@ const ContactSection = () => {
                     </div>
                 </form> */}
                 <div class="schedule-button">
-                    <a href="tel:+14125957332">Schedule a Consultation</a>
+                    <a id="home_phone_cta" href="tel:+14125957332">Schedule a Consultation</a>
                 </div>
             </div>
         </MainSection>
