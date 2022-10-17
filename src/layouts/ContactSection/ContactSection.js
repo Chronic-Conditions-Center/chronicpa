@@ -9,6 +9,8 @@ import { FaFax } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaStreetView } from 'react-icons/fa';
 
+import ContactForm from "../../components/contact-form"
+
 const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadding, contactColorScheme, contactImage, contactAddress, contactPhoneLabel, contactPhoneLink, contactFaxLabel, contactFaxLink, contactEmail, contactDirectionsLink, contactGoogleMapEmbed }) => {
 
     const mainImage = getImage(contactImage.localFile.childImageSharp.gatsbyImageData)
@@ -42,28 +44,7 @@ const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadd
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <h2>How Can We Help?</h2>
-                <form name="Free Consultation Form" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
-                    <input type="hidden" name="form-name" value="Free Consultation Form" aria-label="Input"/>
-                    <div class="flex-form">
-                        <div class="two-col">
-                            <input type="text" name="first-name" placeholder="First Name" aria-label="Input" required/>
-                            <input type="text" name="last-name" placeholder="Last Name" aria-label="Input" required/>
-                        </div>
-                        <div class="two-col">
-                            <input type="text" name="phone" placeholder="Best phone number" aria-label="Input" required/>
-                            <input type="email" name="email" placeholder="Email Address" aria-label="Input" required/>
-                        </div>
-                        <div class="full">
-                            <textarea name="symptoms" placeholder="Describe your Main Symptoms" aria-label="Input"></textarea>
-                        </div>
-                        <div class="submit">
-                            <button type="submit" name="submit" class={"submit"}  aria-label="Send">Schedule a Consultation</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <ContactForm/>
         </div>
         <div class="google-map" dangerouslySetInnerHTML={{__html: contactGoogleMapEmbed}} />
       </BlockContent>
