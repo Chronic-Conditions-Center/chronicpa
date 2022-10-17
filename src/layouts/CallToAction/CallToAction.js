@@ -3,6 +3,7 @@
 import React from "react"
 import styled from 'styled-components'
 import CtaButton from '../../components/cta-button'
+import { Helmet } from 'react-helmet'
 
 const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorScheme, ctaContent, ctaButtonText, ctaButtonLink }) => {
 
@@ -15,10 +16,13 @@ const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorS
           paddingBottom: `${ctaBottomPadding}px`
       }}
       >
+        <Helmet>
+          <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
+        </Helmet>
           <div dangerouslySetInnerHTML={{__html: ctaContent}} />
           <div class="button-row">
-              <CtaButton linkValue={ctaButtonLink} textValue={ctaButtonText} />
-              {/* <a href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a> */}
+              {/* <CtaButton linkValue={ctaButtonLink} textValue={ctaButtonText} /> */}
+              <a href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a>
           </div>
       </BlockContent>
     )
