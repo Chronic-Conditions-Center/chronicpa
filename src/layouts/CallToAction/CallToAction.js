@@ -2,6 +2,7 @@
 
 import React from "react"
 import styled from 'styled-components'
+import CtaButton from '../../components/cta-button'
 
 const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorScheme, ctaContent, ctaButtonText, ctaButtonLink }) => {
 
@@ -16,7 +17,8 @@ const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorS
       >
           <div dangerouslySetInnerHTML={{__html: ctaContent}} />
           <div class="button-row">
-              <a href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a>
+              <CtaButton linkValue={ctaButtonLink} textValue={ctaButtonText} />
+              {/* <a href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a> */}
           </div>
       </BlockContent>
     )
