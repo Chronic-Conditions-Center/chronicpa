@@ -4,11 +4,15 @@ import styled from 'styled-components'
 
 import Layout from "../components/layout-v2"
 import Seo from "../components/seo"
+import { Helmet } from 'react-helmet'
 
 const ThankYouPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <script>{ "gtag('event', 'conversion', {'send_to': 'AW-10996258427/c_uvCKmDu-MDEPustvso'});" }</script>
+      </Helmet>
       <Seo title="Thank You" />
       <MainSection>
         <h1>Thanks for Contacting Us</h1>
