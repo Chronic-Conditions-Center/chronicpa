@@ -31,7 +31,7 @@ class ContactForm extends Component {
                             <textarea name="symptoms" placeholder="Describe your Main Symptoms" aria-label="Input"></textarea>
                         </div>
                         <div class="submit">
-                            <button id="Contact_Submit" type="submit" name="submit" class={"submit"} onClick={this.handleClick} aria-label="Send">Schedule a Consultation</button>
+                            <button id="Contact_Submit" type="submit" name="submit" class={"submit"} aria-label="Send">Schedule a Consultation</button>
                         </div>
                     </div>
                 </form>
