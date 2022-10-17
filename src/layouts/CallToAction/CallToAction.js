@@ -22,7 +22,7 @@ const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorS
           <div dangerouslySetInnerHTML={{__html: ctaContent}} />
           <div class="button-row">
               {/* <CtaButton linkValue={ctaButtonLink} textValue={ctaButtonText} /> */}
-              <a href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a>
+              <a id="Phone_CTA" href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a>
           </div>
       </BlockContent>
     )
