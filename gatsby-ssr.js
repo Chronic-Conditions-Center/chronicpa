@@ -52,6 +52,7 @@ export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
         `
         }}
     ></script>,
+    <script async src="//404532.tctm.co/t.js"></script>,
   ]);
 
   setPostBodyComponents([
