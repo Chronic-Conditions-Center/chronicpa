@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import CtaButton from '../../components/cta-button'
 import { Helmet } from 'react-helmet'
 
-const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorScheme, ctaContent, ctaButtonText, ctaButtonLink }) => {
+const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorScheme, ctaContent, ctaButtonText, ctaButtonLink, phoneText, phoneLink }) => {
 
     return (
       <BlockContent
@@ -17,12 +17,13 @@ const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorS
       }}
       >
         <Helmet>
-          <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
+          <script>{ "gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
         </Helmet>
           <div dangerouslySetInnerHTML={{__html: ctaContent}} />
           <div class="button-row">
               {/* <CtaButton linkValue={ctaButtonLink} textValue={ctaButtonText} /> */}
-              <a id="Phone_CTA" href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a>
+              <a class="button-link" id="Link_CTA" href={ctaButtonLink} target="_blank" rel="noreferrer">{ctaButtonText}</a>
+              <a class="button-phone" id="Phone_CTA" href={phoneLink}>{phoneText}</a>
           </div>
       </BlockContent>
     )
@@ -68,6 +69,10 @@ const BlockContent = styled.section`
       background-color: #25afb4;
     }
     .button-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       a {
         display: inline-block;
         text-decoration: none;
@@ -118,6 +123,9 @@ const BlockContent = styled.section`
           background-color: #25afb4;
           color: #fff;
         }
+        &.button-phone {
+          display: none;
+        }
       }
     }
   }
@@ -162,7 +170,13 @@ const BlockContent = styled.section`
       font-size: 18px;
     }
     a {
-      padding: 10px 25px;
+      display: inline-block !important;
+      font-size: 16px !important;
+      margin: 10px auto;
+      padding: 10px 35px !important;
+      &.button-phone {
+          display: inline-block !important;
+      }
     }
   }
 `

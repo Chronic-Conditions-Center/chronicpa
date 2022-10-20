@@ -9,6 +9,12 @@ const ContactSection = () => {
         query {
             queryContent: wpHomeSection(databaseId: {eq: 13}) {
                 content
+                homeContact {
+                    homeContactButtonLink
+                    homeContactButtonText
+                    homeContactPhoneLink
+                    homeContactPhoneText
+                }
             }
         }
     `)
@@ -41,7 +47,8 @@ const ContactSection = () => {
                     </div>
                 </form> */}
                 <div class="schedule-button">
-                    <a id="home_phone_cta" href="tel:+14125957332">Schedule a Consultation</a>
+                    <a id="home_button_cta" class="button-link" href={data.queryContent.homeContact.homeContactButtonLink} target="_blank">{data.queryContent.homeContact.homeContactButtonText}</a>
+                    <a id="home_phone_cta" class="button-phone" href={data.queryContent.homeContact.homeContactPhoneLink}>{data.queryContent.homeContact.homeContactPhoneText}</a>
                 </div>
             </div>
         </MainSection>
@@ -143,9 +150,13 @@ const MainSection = styled.section`
     .schedule-button {
         width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         a {
             display: inline-block;
-            max-width: 320px;
+            max-width: 340px;
             text-decoration: none;
             font-family: Roboto;
             font-size: 20px;
@@ -160,6 +171,9 @@ const MainSection = styled.section`
                 cursor: pointer;
                 color: #25afb4;
                 background-color: transparent;
+            }
+            &.button-phone {
+                display: none;
             }
         }
     }
@@ -191,8 +205,13 @@ const MainSection = styled.section`
         }
         .schedule-button {
             a {
-                font-size: 18px;
-                padding: 10px 25px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px auto;
+                padding: 10px 35px;
+                &.button-phone {
+                    display: inline-block;
+                }
             }
         }
     }

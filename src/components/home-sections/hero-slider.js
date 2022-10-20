@@ -120,6 +120,9 @@ const SliderMain = styled.section`
                         color: #25afb4;
                         background-color: #fff;
                     }
+                    &.button-phone {
+                        display: none;
+                    }
                 }
             }
             &:after {
@@ -171,7 +174,12 @@ const SliderMain = styled.section`
                     }
                     a {
                         display: inline-block;
-                        font-size: 18px;
+                        font-size: 16px;
+                        margin: 10px auto;
+                        padding: 10px 35px;
+                        &.button-phone {
+                            display: inline-block;
+                        }
                     }
                 }
             }

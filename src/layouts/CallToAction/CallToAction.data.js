@@ -11,6 +11,8 @@ module.exports = () => {
             ctaContent
             ctaButtonText
             ctaButtonLink
+            phoneText
+            phoneLink
         }
     `
 }

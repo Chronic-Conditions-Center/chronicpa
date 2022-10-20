@@ -22,7 +22,7 @@ const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadd
       className={`color-${contactColorScheme}`}
       >
         <Helmet>
-          <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
+          {/* <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script> */}
         </Helmet>
         <div 
         class="contact-main"

@@ -87,6 +87,8 @@ export const pageQuery = graphql`
                 ctaContent
                 ctaButtonText
                 ctaButtonLink
+                phoneText
+                phoneLink
             } 
             ... on WpPage_Custompagebuilder_PageBuilder_TwoColumnsImage {
               fieldGroupName
