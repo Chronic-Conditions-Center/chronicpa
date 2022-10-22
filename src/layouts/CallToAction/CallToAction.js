@@ -17,7 +17,7 @@ const CallToAction = ({ ctaSectionId, ctaTopPadding, ctaBottomPadding, ctaColorS
       }}
       >
         <Helmet>
-          <script>{ "gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
+          {/* <script>{ "gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script> */}
         </Helmet>
           <div dangerouslySetInnerHTML={{__html: ctaContent}} />
           <div class="button-row">
@@ -57,6 +57,9 @@ const BlockContent = styled.section`
           background-color: #fff;
           color: #25afb4;
         }
+        &.button-phone {
+          display: none;
+        }
       }
     }
   }
@@ -88,6 +91,9 @@ const BlockContent = styled.section`
         &:hover {
           background-color: #fff;
           color: #25afb4;
+        }
+        &.button-phone {
+          display: none;
         }
       }
     }

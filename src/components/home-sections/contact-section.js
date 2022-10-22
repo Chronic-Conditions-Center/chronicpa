@@ -23,7 +23,7 @@ const ContactSection = () => {
 
         <MainSection id={"home_contact"}>
             <Helmet>
-                <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script>
+                {/* <script>{ " gtag('config', 'AW-10996258427/NSPpCIGUu-MDEPustvso', {'phone_conversion_number': '412-595-7332'});" }</script> */}
             </Helmet>
             <div class="main-col">
                 <div class="section-title" dangerouslySetInnerHTML={{ __html: data.queryContent.content}} />
