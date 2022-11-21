@@ -333,3 +333,21 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/* additional styles */
+
+.w-70, .w-40 {
+  margin: auto;
+  display: block;
+}
+.w-70 {
+  width: 70%;
+}
+.w-40 {
+  width: 40%;
+}
+@media only screen and (max-width: 600px) {
+	.w-70, .w-40 {
+		width: 100%;
+	}
+}
