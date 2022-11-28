@@ -86,6 +86,9 @@ const HeaderTop = styled.div`
         justify-content: center;
         align-items: center;
         transition-duration: .5s;
+        span {
+            margin: 0 10px;
+        }
         svg {
             margin: 0 10px;
         }
