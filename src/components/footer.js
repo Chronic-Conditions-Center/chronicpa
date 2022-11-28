@@ -53,6 +53,10 @@ const Footer = () => {
                 <p>© Copyright 2012 - 2022   |   CHRONIC PA   |   ALL RIGHTS RESERVED  |  <Link to={"/site-map/"}>Sitemap</Link></p>
             </div>
 
+            <div class="appointment-widget">
+                <a href="https://live.vcita.com/site/ld2sp6z9us1n52jd/online-scheduling" target="_blank" rel="noreferrer">Make an Appointment</a>
+            </div>
+
         </FooterMain>
     )
 
@@ -113,6 +117,29 @@ const FooterMain = styled.footer`
             font-weight: 500;
             text-align: center;
             text-decoration: none;
+        }
+    }
+    .appointment-widget {
+        position: fixed;
+        right: 20px;
+        bottom: 0;
+        z-index: 100;
+        a {
+            display: block;
+            background-color: #508dcc !important;
+            color: #fff;
+            font-family: Arial,sans-serif !important;
+            font-size: 14px !important;
+            line-height: 37px;
+            border-radius: 5px 5px 0 0;
+            padding: 0 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 5px #ccc;
+            text-decoration: none;
+        }
+        @media(max-width:767px) {
+            display: none;
         }
     }
     @media(max-width:1100px) {

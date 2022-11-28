@@ -32,7 +32,7 @@ class Header extends Component {
 
                 <HeaderTop className="header-top">
 
-                    <p><a href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>  <a href="https://calendly.com/ksmithdc" target="_blank" rel="noreferrer"><FaRegCalendarAlt size={18}/> Schedule a Consult</a></p>
+                    <p><a href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>  <span>|</span> Now Accepting New Patients <span>|</span>  <a href="https://live.vcita.com/site/ld2sp6z9us1n52jd/online-scheduling" target="_blank" rel="noreferrer"><FaRegCalendarAlt size={18}/> Schedule a Consult</a></p>
 
                 </HeaderTop>
 
@@ -96,6 +96,7 @@ const HeaderTop = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 5px;
     }
     span {
         display: flex;
@@ -108,6 +109,14 @@ const HeaderTop = styled.div`
     @media(max-width:767px) {
         p {
             font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            a {
+                margin-right: 0;
+            }
+            span {
+                display: none;
+            }
         }
     }
 `

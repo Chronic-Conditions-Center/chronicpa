@@ -112,6 +112,17 @@ const FormContainer = styled.div`
             }
         }
     }
+    @media(max-width:767px) {
+        width: 100%;
+        max-width: 600px;
+        padding-left: 0px;
+        .two-col {
+            flex-wrap: wrap;
+            input {
+                width: 100% !important;
+            }
+        }
+    }
 `
 
 export default ContactForm
