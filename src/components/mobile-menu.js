@@ -45,10 +45,10 @@ class MobileMenu extends Component {
     }
 
     render() {
-        // let aboutMenu = "aboutMenu";
-        // if (this.state.aboutOpen) {
-        //   aboutMenu += ' subMenuOpen';
-        // }
+        let aboutMenu = "aboutMenu";
+        if (this.state.aboutOpen) {
+          aboutMenu += ' subMenuOpen';
+        }
         let conditionsMenu = "conditionsMenu";
         if (this.state.conditionsOpen) {
           conditionsMenu += ' subMenuOpen';
@@ -65,15 +65,15 @@ class MobileMenu extends Component {
             <MobileMenuFull id={"mobileMenu"}>      
                 <MainMobileMenu id={"mainMobileMenu"}>
                     <ul>
-                        <li><Link to={"/history/"}>About Us</Link></li>
-                        {/* <li className={aboutMenu} onClick={() => this.toggleAboutMenu()} >
+                        {/* <li><Link to={"/history/"}>About Us</Link></li> */}
+                        <li className={aboutMenu} onClick={() => this.toggleAboutMenu()} >
                             <span>About Us</span>
                             <FaChevronDown size={14}/>
                             <ul class="subMenu">
-                                <li><Link to={"/history/"}>History</Link></li>
-                                <li><Link to={"/team/"}>Team</Link></li>
+                                <li><Link to={"/history/"}>Our History</Link></li>
+                                <li><Link to={"/meet-the-staff/"}>Meet the Staff</Link></li>
                             </ul>
-                        </li> */}
+                        </li>
                         <li className={conditionsMenu} onClick={() => this.toggleConditionsMenu()} >
                             <span>Conditions </span>
                             <FaChevronDown size={14}/>

@@ -9,13 +9,13 @@ const HeaderMenu = () => {
     return(
         <MainNav>
             <ul class="main-menu">
-                <li><Link to={"/history/"}>About Us</Link></li>
-                {/* <li class={"has-submenu"}>About Us <FaChevronDown size={12}/>
+                {/* <li><Link to={"/history/"}>About Us</Link></li> */}
+                <li class={"has-submenu"}>About Us <FaChevronDown size={12}/>
                     <ul class="submenu">
-                        <li><Link to={"/history/"}>History</Link></li>
-                        <li><Link to={"/team/"}>Team</Link></li>
+                        <li><Link to={"/history/"}>Our History</Link></li>
+                        <li><Link to={"/meet-the-staff/"}>Meet the Staff</Link></li>
                     </ul>
-                </li> */}
+                </li>
                 <li class={"has-submenu"}>Conditions <FaChevronDown size={12}/>
                     <ul class="submenu large">
                         <li><Link to={"/back-pain/"}>Back Pain</Link></li>
