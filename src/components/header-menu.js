@@ -31,6 +31,7 @@ const HeaderMenu = () => {
                         <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
                         <li><Link to={"/sciatica-treatment/"}>Sciatica</Link></li>
                         <li><Link to={"/scoliosis-chiropactic/"}>Scoliosis</Link></li>
+                        <li><Link to={"/spinal-stenosis/"}>Spinal Stenosis</Link></li>
                         {/* <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li> */}
                         <li><Link to={"/thyroid/"}>Low Thyroid</Link></li>
                     </ul>
