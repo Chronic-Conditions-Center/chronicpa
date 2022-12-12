@@ -101,7 +101,7 @@ const MainBlog = styled.section`
     margin-bottom: 20px;
     transition-duration: .3s;
   }
-  p, ol {
+  p, ol, ul {
     font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
@@ -109,6 +109,9 @@ const MainBlog = styled.section`
     font-style: normal;
     line-height: 1.3;
     color: #000;
+  }
+  ul {
+    padding-left: 30px;
   }
 `
 

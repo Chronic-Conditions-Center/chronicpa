@@ -52,7 +52,59 @@ module.exports = {
         path: `${__dirname}/content/assets`,
       },
     },
-
+    /* setting up RSS feed */
+    {
+      resolve: "gatsby-plugin-feed",
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            title: "Chronic Conditions Center Blog RSS Feed",
+            output: "rss.xml",
+            query: `
+            {
+              allWpPost(sort: {order: DESC, fields: date} {
+                edges {
+                  node {
+                    title
+                    date
+                    uri
+                    slug
+                    seo {
+                      metaDesc
+                    }
+                    content
+                  }
+                }
+              }
+            }
+            `,
+            serialize: ({ query: { site, allWpPost } }) => {
+              return allWpPost.edges.map(edge => {
+                return Object.assign({}, edge.node, {
+                  description: edge.node.seo.metaDesc,
+                  date: edge.node.date,
+                  url: site.siteMetadata.siteUrl + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.slug,
+                  custom_elements: [{ "content:encoded": edge.node.content }],
+                })
+              })
+            },
+          }
+        ]
+      }
+    },
     /**
      * The following two plugins are required if you want to use Gatsby image
      * See https://www.gatsbyjs.com/docs/gatsby-image/#setting-up-gatsby-image
