@@ -52,7 +52,58 @@ module.exports = {
         path: `${__dirname}/content/assets`,
       },
     },
-    
+    /* RSS feed setup */
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allWpPost } }) => {
+              return allWpPost.edges.map(edge => {
+                return Object.assign({}, edge.node.seo, {
+                  description: edge.node.seo.metaDesc,
+                  date: edge.node.date,
+                  url: site.siteMetadata.siteUrl + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.slug,
+                  custom_elements: [{ "content:encoded": edge.node.content }],
+                })
+              })
+            },
+            query: `
+              {
+                allWpPost(sort: {fields: date, order: DESC}) {
+                  edges {
+                    node {
+                      seo {
+                        title
+                        metaDesc
+                      }
+                      content
+                      date
+                      slug
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Chronic Conditions Center RSS Feed",
+          },
+        ],
+      },
+    },
     /**
      * The following two plugins are required if you want to use Gatsby image
      * See https://www.gatsbyjs.com/docs/gatsby-image/#setting-up-gatsby-image
