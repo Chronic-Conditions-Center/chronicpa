@@ -54,7 +54,7 @@ module.exports = {
     },
     /* setting up RSS feed */
     {
-      resolve: "gatsby-plugin-feed",
+      resolve: `gatsby-plugin-feed`,
       options: {
         query: `
           {
@@ -70,40 +70,41 @@ module.exports = {
         `,
         feeds: [
           {
-            title: "Chronic Conditions Center Blog RSS Feed",
-            output: "rss.xml",
-            query: `
-            {
-              allWpPost(sort: {order: DESC, fields: date} {
-                edges {
-                  node {
-                    title
-                    date
-                    uri
-                    slug
-                    seo {
-                      metaDesc
-                    }
-                    content
-                  }
-                }
-              }
-            }
-            `,
-            serialize: ({ query: { site, allWpPost } }) => {
-              return allWpPost.edges.map(edge => {
-                return Object.assign({}, edge.node, {
-                  description: edge.node.seo.metaDesc,
-                  date: edge.node.date,
-                  url: site.siteMetadata.siteUrl + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.slug,
-                  custom_elements: [{ "content:encoded": edge.node.content }],
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
                 })
               })
             },
-          }
-        ]
-      }
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields { 
+                      slug 
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Chronic Condition Center RSS Feed",
+          },
+        ],
+      },
     },
     /**
      * The following two plugins are required if you want to use Gatsby image
