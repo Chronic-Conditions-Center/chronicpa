@@ -55,8 +55,4 @@ export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
     <script async src="//404532.tctm.co/t.js"></script>,
   ]);
 
-  setPostBodyComponents([
-    <script id="analyticsId" type="text/javascript" src="https://analytics-5900.kxcdn.com/analytics.js" data-id="SWtwQmJVNTZRVzVqZW01VlZHNDFWVWhUTmxsMFkzYzlQU0k9" async></script>,
-  ]);
-
 }

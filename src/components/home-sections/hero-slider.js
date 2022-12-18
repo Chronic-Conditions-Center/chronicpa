@@ -46,6 +46,10 @@ class HeroSlider extends Component {
                     </div>
                 </Slider>
 
+                <MobileHero>
+                    <div class="hero-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideOneCopy}} />
+                </MobileHero>
+
             </SliderMain>
         )
 
@@ -160,6 +164,7 @@ const SliderMain = styled.section`
     }
     @media(max-width:767px) {
         .slick-slider {
+            display: none;
             .hero-slide {
                 .slide-content {
                     padding: 0 20px;
@@ -184,6 +189,59 @@ const SliderMain = styled.section`
                 }
             }
         }
+    }
+`
+
+const MobileHero = styled.section`
+    display: none;
+    background-color: #25afb4;
+    padding: 80px 20px 20px;
+    .hero-content {
+        text-align: center;
+    }
+    h1,
+    h2 {
+        font-family: Roboto;
+        font-size: 32px;
+        line-height: 1.3;
+        font-weight: 100;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0,0,0,.8);
+        transition-duration: .3s;
+    }
+    p {
+        font-family: Roboto;
+        font-size: 18px;
+        line-height: 1.3;
+        color: #fff;
+        transition-duration: .3s;
+    }
+    a {
+        font-family: Roboto;
+        font-size: 24px;
+        line-height: 1.5;
+        color: #fff;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 24px;
+        line-height: 1.5;
+        color: #25afb4;
+        background-color: #fff;
+        padding: 10px 50px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        transition-duration: .3s;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px auto;
+        padding: 10px 35px;
+        &:hover {
+            color: #25afb4;
+            background-color: #fff;
+        }
+    }
+    @media(max-width:767px) {
+        display: block;
     }
 `
 

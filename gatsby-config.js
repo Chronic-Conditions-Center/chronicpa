@@ -117,6 +117,7 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-preact`,
     // "gatsby-plugin-webpack-bundle-analyser-v2",
     {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
@@ -146,25 +147,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-S0MQ8L14P8", // Google Analytics / GA
-          "AW-10996258427", // Google Ads / Adwords / AW
-        ],
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-TBP8T4T",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: "631256545195880",
       },
     },
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
