@@ -75,13 +75,16 @@ const BlogIndex = ({
             })}
           </ol>
 
-          {previousPagePath && (
-            <>
-              <Link to={previousPagePath}>Previous page</Link>
-              <br />
-            </>
-          )}
-          {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
+            <div class="pagination">
+              {previousPagePath && (
+                <>
+                  <Link to={previousPagePath}>Previous page</Link>
+                  <br />
+                </>
+              )}
+              {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
+            </div>
+          
         </div>
       </MainBlog>
 
@@ -159,6 +162,20 @@ const MainBlog = styled.section`
     font-style: normal;
     line-height: 1.3;
     color: #000;
+  }
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0 30px;
+    a {
+      font-family: Roboto;
+      font-size: 18px;
+      color: #25afb4;
+      text-decoration: none;
+    }
   }
   @media(max-width:767px) {
     .blog-banner {

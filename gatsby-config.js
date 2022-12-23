@@ -144,6 +144,7 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://chronicpa.com/`,
+        stripQueryString: true,
       },
     },
     {
