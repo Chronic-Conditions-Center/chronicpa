@@ -1,7 +1,7 @@
 import React, { Component} from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
-import PageTransition from 'gatsby-plugin-page-transitions'
+//import PageTransition from 'gatsby-plugin-page-transitions'
 
 import "@fontsource/roboto"
 import "@fontsource/roboto/500.css"
@@ -26,11 +26,11 @@ class Layout extends Component {
 
                 <MainLayout>
 
-                    <PageTransition transitionTime={1000}>
+                    {/* <PageTransition transitionTime={1000}> */}
                         <MainContent>
                             <main>{children}</main>
                         </MainContent>
-                    </PageTransition>
+                    {/* </PageTransition> */}
 
                 </MainLayout>
 
