@@ -19,7 +19,7 @@ const HeaderLogo = () => {
 
   const mainLogo = getImage(data.placeholderImage.childImageSharp.gatsbyImageData)
 
-  return <GatsbyImage image={mainLogo} alt="Chronic Conditions Center Logo" />
+  return <GatsbyImage image={mainLogo} alt="Chronic Conditions Center Logo" loading="eager" />
 }
 
 export default HeaderLogo

@@ -33,16 +33,16 @@ class HeroSlider extends Component {
 
                 <Slider {...settings}>
                     <div class="hero-slide">
-                        <GatsbyImage className={"slide-background top-center"} image={slideOneImage} alt={queryContent.heroSliderV2.hsSlideOneImage.title} />
+                        <GatsbyImage className={"slide-background top-center"} image={slideOneImage} alt={queryContent.heroSliderV2.hsSlideOneImage.title} loading="eager" />
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideOneCopy}} />
                     </div>
                     <div class="hero-slide">
                         <GatsbyImage className={"slide-background"} image={slideTwoImage} alt={queryContent.heroSliderV2.hsSlideTwoImage.title} />
-                        <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideTwoCopy}} />
+                        <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideTwoCopy}} loading="eager" />
                     </div>
                     <div class="hero-slide">
                         <GatsbyImage className={"slide-background"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
-                        <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideThreeCopy}} />
+                        <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideThreeCopy}} loading="eager" />
                     </div>
                 </Slider>
 
