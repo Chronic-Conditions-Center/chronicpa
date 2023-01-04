@@ -10,6 +10,7 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaPinterestP } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
 
@@ -37,6 +38,7 @@ const Footer = () => {
                     <p class="footer-title">Follow Us</p>
                     <div class="footer-socials">
                         <a href="https://www.facebook.com/cccpa1" target="_blank"><FaFacebookF size={24}/></a>
+                        <a href="https://twitter.com/kevinsmithdc" target="_blank"><FaTwitter size={24}/></a>
                         <a href="https://www.instagram.com/kevinsmithdc" target="_blank"><FaInstagram size={24}/></a>
                         <a href="https://www.youtube.com/c/KevinSmithdc" target="_blank"><FaYoutube size={24}/></a>
                         <a href="https://www.linkedin.com/in/ksmithdc/" target="_blank"><FaLinkedin size={24}/></a>
@@ -50,7 +52,7 @@ const Footer = () => {
             </div>
 
             <div class="footer-bottom">
-                <p>© Copyright 2012 - 2022   |   CHRONIC PA   |   ALL RIGHTS RESERVED  |  <Link to={"/site-map/"}>Sitemap</Link></p>
+                <p>© Copyright 2012 - 2023   |   CHRONIC PA   |   ALL RIGHTS RESERVED  |  <Link to={"/site-map/"}>Sitemap</Link></p>
             </div>
 
             <div class="appointment-widget">

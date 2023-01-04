@@ -55,6 +55,7 @@ const HeaderMenu = () => {
                         <li><Link to={"/new-patients/"}>New Patients</Link></li>
                         <li><Link to={"/tour-of-the-office/"}>Tour of the Office</Link></li>
                         <li><Link to={"/blog/"}>Blog</Link></li>
+                        <li><Link to={"/fullscript/"}>Store</Link></li>
                         {/* <li><Link to={"/research/"}>Research</Link></li> */}
                     </ul>
                 </li>

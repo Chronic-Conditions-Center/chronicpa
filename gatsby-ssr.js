@@ -43,6 +43,7 @@ export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
               }],
               "sameAs": [
                 "https://www.facebook.com/cccpa1",
+                "https://twitter.com/kevinsmithdc",
                 "https://www.instagram.com/kevinsmithdc",
                 "https://www.youtube.com/c/KevinSmithdc",
                 "https://www.linkedin.com/in/ksmithdc/",
@@ -53,6 +54,10 @@ export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
         }}
     ></script>,
     <script async src="//404532.tctm.co/t.js"></script>,
+  ]);
+
+  setPostBodyComponents([
+    <script id="analyticsId" type="text/javascript" src="https://analytics-5900.kxcdn.com/analytics.js" data-id="SWtwQmJVNTZRVzVqZW01VlZHNDFWVWhUTmxsMFkzYzlQU0k9" async></script>,
   ]);
 
 }
