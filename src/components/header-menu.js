@@ -47,6 +47,7 @@ const HeaderMenu = () => {
                         <li><Link to={"/laser/"}>Laser</Link></li>
                         <li><Link to={"/spinal-decompression/"}>Decompression</Link></li>
                         <li><Link to={"/pulsewave-therapy/"}>Pulsewave</Link></li>
+                        <li><Link to={"/rehabilitation/"}>Rehabilitation</Link></li>
                         {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                     </ul>
                 </li>
