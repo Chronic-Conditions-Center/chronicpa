@@ -84,7 +84,7 @@ class MobileMenu extends Component {
                                 {/* <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li> */}
                                 <li><Link to={"/hip-pain-chiropractor/"}>Hip Pain</Link></li>
                                 <li><Link to={"/knee-pain/"}>Knee Pain</Link></li>
-                                <li><Link to={"/foot-pain-chiropractor/"}>Foot Pain</Link></li>
+                                <li><Link to={"/foot-pain-relief/"}>Foot Pain</Link></li>
                                 <li><Link to={"/car-accident-pain/"}>Car Accident Pain</Link></li>
                                 <li><Link to={"/numbness-tingling/"}>Numbness/Tingling</Link></li>
                                 <li><Link to={"/chiropractic-for-herniated-discs/"}>Herniated Disc</Link></li>
