@@ -111,6 +111,7 @@ class MobileMenu extends Component {
                                 <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
                                 <li><Link to={"/rehabilitation/"}>Rehabilitation</Link></li>
                                 <li><Link to={"/integrative-functional-medicine/"}>Functional Medicine</Link></li>
+                                <li><Link to={"/soft-tissue-therapy/"}>Soft Tissue Therapy</Link></li>
                                 {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
                             </ul>
                         </li>
