@@ -42,7 +42,7 @@ const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadd
                         <div class="contact-links">
                             <a id="contact_phone_link" href={contactPhoneLink}><FaPhone size={20}/> {contactPhoneLabel}</a>
                             <a href={contactFaxLink}><FaFax size={20}/> {contactFaxLabel}</a>
-                            <a href={`mailto:${contactEmail}`}><FaEnvelope size={20}/> {contactEmail}</a>
+                            {/* <a href={`mailto:${contactEmail}`}><FaEnvelope size={20}/> {contactEmail}</a> */}
                             <a href={contactDirectionsLink} target="_blank" rel="noreferrer"><FaStreetView size={20}/> Get Directions</a>
                         </div>
                     </div>

@@ -16,6 +16,7 @@ class ContactForm extends Component {
         return (
             <FormContainer>
                 <h2>How Can We Help?</h2>
+                <h3>Ask Dr. Smith About Any Issues You Have</h3>
                 <form name="Free Consultation Form" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
                     <input type="hidden" name="form-name" value="Free Consultation Form" aria-label="Input"/>
                     <div class="flex-form">
@@ -31,10 +32,11 @@ class ContactForm extends Component {
                             <textarea name="symptoms" placeholder="Describe your Main Symptoms" aria-label="Input"></textarea>
                         </div>
                         <div class="submit">
-                            <button id="Contact_Submit" type="submit" name="submit" class={"submit"} aria-label="Send">Schedule a Consultation</button>
+                            <button id="Contact_Submit" type="submit" name="submit" class={"submit"} aria-label="Send">Submit A Question</button>
                         </div>
                     </div>
                 </form>
+                <h3 style={{textAlign: 'center'}}>You Will Get A Response Back In 24 Hours</h3>
             </FormContainer>
         )
     }
@@ -43,6 +45,9 @@ class ContactForm extends Component {
 const FormContainer = styled.div`
     width: 50%;
     padding-left: 30px;
+    h3 {
+        font-size: 20px !important;
+    }
     .flex-form {
         max-width: 700px;
         width: 100%;
@@ -91,6 +96,7 @@ const FormContainer = styled.div`
         .submit {
             width: 100%;
             text-align: center;
+            margin-bottom: 20px;
             button {
                 display: inline-block;
                 max-width: 320px;
