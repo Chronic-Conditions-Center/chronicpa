@@ -94,6 +94,7 @@ class MobileMenu extends Component {
                                 <li><Link to={"/spinal-stenosis/"}>Spinal Stenosis</Link></li>
                                 {/* <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li> */}
                                 <li><Link to={"/thyroid/"}>Low Thyroid</Link></li>
+                                <li><Link to={"/sports-injuries/"}>Sports Injuries</Link></li>
                             </ul>
                         </li>
                         <li className={servicesMenu} onClick={() => this.toggleServicesMenu()} >
