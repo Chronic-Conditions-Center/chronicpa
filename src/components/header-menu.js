@@ -34,6 +34,7 @@ const HeaderMenu = () => {
                         <li><Link to={"/spinal-stenosis/"}>Spinal Stenosis</Link></li>
                         {/* <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li> */}
                         <li><Link to={"/thyroid/"}>Low Thyroid</Link></li>
+                        <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li>
                         <li><Link to={"/sports-injuries/"}>Sports Injuries</Link></li>
                     </ul>
                 </li>
