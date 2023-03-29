@@ -26,7 +26,7 @@ const Footer = () => {
                     <p class="footer-title">Contact Info</p>
                     <p><a href="tel:+14125957332" aria-label="Phone Number 412-595-7332"><FaPhone size={24}/>412-595-7332</a><br/>
                     <a href="mailto:info@chronicpa.com" aria-label="Email Address"><FaRegEnvelope size={24}/>info@chronicpa.com</a><br/>
-                    <a href="https://g.page/cccpa1?share" target="_blank" aria-aria-label="Street Address"><FaMapMarkerAlt/>1699 Washington Rd.<br/>
+                    <a href="https://g.page/cccpa1?share" target="_blank" aria-label="Street Address"><FaMapMarkerAlt/>1699 Washington Rd.<br/>
                     Suite 401<br/>
                     Pittsburgh, PA 15228</a></p>
                 </div>
