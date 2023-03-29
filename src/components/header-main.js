@@ -78,10 +78,13 @@ const HeaderFull = styled.header`
 `
 
 const HeaderTop = styled.div`
-    background-color: #25afb4;
+    position: relative;
     padding: 5px 20px;
     width: 100%;
-    position: relative;
+    font-size: 13px;
+    color: #fff;
+    background-color: #25afb4;
+
     p {
         font-family: "Roboto";
         font-size: 20px;
