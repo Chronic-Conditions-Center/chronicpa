@@ -160,9 +160,14 @@ const FooterMain = styled.footer`
             .flex-col {
                 width: 100%;
                 padding-right: 0;
+                padding-bottom: 20px;
                 text-align: center;
                 .footer-socials {
                     margin-bottom: 50px;
+                }
+                p.footer-title {
+                    margin-bottom: 0.5em;
+                    opacity: 0.7;
                 }
             }
         }
