@@ -3,10 +3,6 @@ import PropTypes from "prop-types"
 import styled from 'styled-components'
 //import PageTransition from 'gatsby-plugin-page-transitions'
 
-import "@fontsource/roboto"
-import "@fontsource/roboto/500.css"
-import "@fontsource/roboto-slab"
-
 import "../css/slick.css"
 import "../css/slick-theme.css"
 import "../css/image-gallery.scss"
