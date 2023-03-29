@@ -24,9 +24,9 @@ const Footer = () => {
                 </div>
                 <div class="flex-col">
                     <p class="footer-title">Contact Info</p>
-                    <p><a href="tel:+14125957332"><FaPhone size={24}/>412-595-7332</a><br/>
-                    <a href="mailto:info@chronicpa.com"><FaRegEnvelope size={24}/>info@chronicpa.com</a><br/>
-                    <a href="https://g.page/cccpa1?share" target="_blank"><FaMapMarkerAlt/>1699 Washington Rd.<br/>
+                    <p><a href="tel:+14125957332" aria-label="Phone Number 412-595-7332"><FaPhone size={24}/>412-595-7332</a><br/>
+                    <a href="mailto:info@chronicpa.com" aria-label="Email Address"><FaRegEnvelope size={24}/>info@chronicpa.com</a><br/>
+                    <a href="https://g.page/cccpa1?share" target="_blank" aria-aria-label="Street Address"><FaMapMarkerAlt/>1699 Washington Rd.<br/>
                     Suite 401<br/>
                     Pittsburgh, PA 15228</a></p>
                 </div>
@@ -37,17 +37,17 @@ const Footer = () => {
                     by appointment only.</p>
                     <p class="footer-title">Follow Us</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/cccpa1" target="_blank"><FaFacebookF size={24}/></a>
-                        <a href="https://twitter.com/kevinsmithdc" target="_blank"><FaTwitter size={24}/></a>
-                        <a href="https://www.instagram.com/kevinsmithdc" target="_blank"><FaInstagram size={24}/></a>
-                        <a href="https://www.youtube.com/c/KevinSmithdc" target="_blank"><FaYoutube size={24}/></a>
-                        <a href="https://www.linkedin.com/in/ksmithdc/" target="_blank"><FaLinkedin size={24}/></a>
-                        <a href="https://www.pinterest.com/ksmithdc/_saved/" target="_blank"><FaPinterestP size={24}/></a>
+                        <a href="https://www.facebook.com/cccpa1" target="_blank" aria-label="Facebook"><FaFacebookF size={24}/></a>
+                        <a href="https://twitter.com/kevinsmithdc" target="_blank" aria-label="Twitter"><FaTwitter size={24}/></a>
+                        <a href="https://www.instagram.com/kevinsmithdc" target="_blank" aria-label="Instagram"><FaInstagram size={24}/></a>
+                        <a href="https://www.youtube.com/c/KevinSmithdc" target="_blank" aria-label="YouTube"><FaYoutube size={24}/></a>
+                        <a href="https://www.linkedin.com/in/ksmithdc/" target="_blank" aria-label="LinkedIn"><FaLinkedin size={24}/></a>
+                        <a href="https://www.pinterest.com/ksmithdc/_saved/" target="_blank" aria-label="Pinterest"><FaPinterestP size={24}/></a>
                     </div>
                 </div>
                 <div class="flex-col">
                     <p class="footer-title">Our Location</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.6932179464447!2d-80.051309!3d40.349151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f99c7d96e10d%3A0x302207661968f10f!2sChronic%20Conditions%20Center!5e0!3m2!1sen!2smx!4v1659712062695!5m2!1sen!2smx" width="100%" height="250" style={{border: '0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title="Google Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.6932179464447!2d-80.051309!3d40.349151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f99c7d96e10d%3A0x302207661968f10f!2sChronic%20Conditions%20Center!5e0!3m2!1sen!2smx!4v1659712062695!5m2!1sen!2smx" width="100%" height="250" style={{border: '0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -140,9 +140,9 @@ const FooterMain = styled.footer`
             box-shadow: 0 0 5px #ccc;
             text-decoration: none;
         }
-        @media(max-width:767px) {
+        /* @media(max-width:767px) {
             display: none;
-        }
+        } */
     }
     @media(max-width:1100px) {
         .flex-row {
