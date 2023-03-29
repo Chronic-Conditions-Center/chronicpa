@@ -8,8 +8,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@fontsource/roboto": "^4.5.7",
-    "@fontsource/roboto-slab": "^4.5.8",
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^4.0.0",
     "gatsby-cli": "^4.23.0",
@@ -48,8 +46,10 @@
     "react-slick": "^0.28.1",
     "sass": "^1.54.0",
     "styled-components": "^5.3.5",
-    "typeface-merriweather": "1.1.13",
-    "typeface-montserrat": "1.1.13",
+    "@fontsource/merriweather": "^4.5.14",
+    "@fontsource/montserrat": "^4.5.14",
+    "@fontsource/roboto": "^4.5.7",
+    "@fontsource/roboto-slab": "^4.5.8",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
