@@ -13,16 +13,12 @@ module.exports = () => {
                 sourceUrl
                 original: localFile {
                     childImageSharp {
-                        fluid(maxWidth: 1200) {
-                            ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData(layout: FIXED, width:1200)
                     }
                 }
                 thumbnail: localFile {
                     childImageSharp {
-                        fluid(maxWidth: 300) {
-                            ...GatsbyImageSharpFluid
-                          }
+                        gatsbyImageData(layout: FIXED, width:300)
                     }
                 }
             }

@@ -109,7 +109,7 @@ export const pageQuery = graphql`query PageById($id: String!) {
             sourceUrl
             original: localFile {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(width: 1200, layout: FULL_WIDTH)
               }
             }
             thumbnail: localFile {
