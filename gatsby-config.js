@@ -36,6 +36,9 @@ module.exports = {
         url:
           process.env.WPGRAPHQL_URL ||
           `http://admin.chronicpa.com/graphql`,
+        develop: {
+          hardCacheMediaFiles: true,
+        }
       },
     },
 
