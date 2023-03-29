@@ -9,19 +9,19 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
     const galleryMap = slideshowImages
 
     return (
-      <BlockContent
-      id={gallerySectionId}
-      className={`color-${galleryColorScheme}`}
-      style={{
-          paddingTop: `${galleryTopPadding}px`,
-          paddingBottom: `${galleryBottomPadding}px`
-      }}
-      >
-        <div class="gallery-row">
-            <ImageGallery items={galleryMap.map(item => ({ original: item.original.childImageSharp.fluid.src , thumbnail: item.thumbnail.childImageSharp.fluid.src }))}/>
-        </div>
-      </BlockContent>
-    )
+        <BlockContent
+        id={gallerySectionId}
+        className={`color-${galleryColorScheme}`}
+        style={{
+            paddingTop: `${galleryTopPadding}px`,
+            paddingBottom: `${galleryBottomPadding}px`
+        }}
+        >
+          <div class="gallery-row">
+              <ImageGallery items={galleryMap.map(item => ({ original: item.original.childImageSharp.gatsbyImageData.src , thumbnail: item.thumbnail.childImageSharp.gatsbyImageData.src }))}/>
+          </div>
+        </BlockContent>
+    );
   }
 
   const BlockContent = styled.section`

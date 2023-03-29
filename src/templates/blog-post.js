@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import parse from "html-react-parser"
 import styled from 'styled-components'
 
@@ -9,7 +9,7 @@ import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {
   const featuredImage = {
-    fluid: post.featuredImage?.node?.localFile?.childImageSharp?.fluid,
+    fluid: post.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
     alt: post.featuredImage?.node?.alt || ``,
   }
 
@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
       <Seo 
       title={post.seo.title} 
       description={post.seo.metaDesc}
-      metaImage={post.seo.opengraphImage.localFile.childImageSharp.fluid}
+      metaImage={post.seo.opengraphImage.localFile.childImageSharp.gatsbyImageData}
       />
 
       <MainBlog>
@@ -34,11 +34,10 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
             {/* if we have a featured image for this post let's display it */}
             {featuredImage?.fluid && (
-              <Image
-                fluid={featuredImage.fluid}
+              <GatsbyImage
+                image={featuredImage.gatsbyImageData}
                 alt={featuredImage.alt}
-                style={{ marginBottom: 50 }}
-              />
+                style={{ marginBottom: 50 }} />
             )}
           </header>
 
@@ -80,7 +79,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
       </MainBlog>
 
     </Layout>
-  )
+  );
 }
 
 
@@ -117,58 +116,41 @@ const MainBlog = styled.section`
 
 export default BlogPostTemplate
 
-export const pageQuery = graphql`
-  query BlogPostById(
-    # these variables are passed in via createPage.pageContext in gatsby-node.js
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
-    # selecting the current post by id
-    post: wpPost(id: { eq: $id }) {
-      id
-      excerpt
-      content
+export const pageQuery = graphql`query BlogPostById($id: String!, $previousPostId: String, $nextPostId: String) {
+  post: wpPost(id: {eq: $id}) {
+    id
+    excerpt
+    content
+    title
+    date(formatString: "MMMM DD, YYYY")
+    seo {
       title
-      date(formatString: "MMMM DD, YYYY")
-      seo {
-        title
-        metaDesc
-        opengraphImage {
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
-
-      featuredImage {
-        node {
-          altText
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1000, quality: 100) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
+      metaDesc
+      opengraphImage {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
     }
-
-    # this gets us the previous post by id (if it exists)
-    previous: wpPost(id: { eq: $previousPostId }) {
-      uri
-      title
-    }
-
-    # this gets us the next post by id (if it exists)
-    next: wpPost(id: { eq: $nextPostId }) {
-      uri
-      title
+    featuredImage {
+      node {
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(quality: 100, placeholder: DOMINANT_COLOR, layout: FULL_WIDTH)
+          }
+        }
+      }
     }
   }
-`
+  previous: wpPost(id: {eq: $previousPostId}) {
+    uri
+    title
+  }
+  next: wpPost(id: {eq: $nextPostId}) {
+    uri
+    title
+  }
+}`
