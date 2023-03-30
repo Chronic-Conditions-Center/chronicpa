@@ -37,11 +37,11 @@ class HeroSlider extends Component {
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideOneCopy}} />
                     </div>
                     <div class="hero-slide">
-                        <GatsbyImage className={"slide-background"} image={slideTwoImage} alt={queryContent.heroSliderV2.hsSlideTwoImage.title} />
+                        <GatsbyImage className={"slide-background top-center"} image={slideTwoImage} alt={queryContent.heroSliderV2.hsSlideTwoImage.title} />
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideTwoCopy}} loading="eager" />
                     </div>
                     <div class="hero-slide">
-                        <GatsbyImage className={"slide-background"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
+                        <GatsbyImage className={"slide-background center-center"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideThreeCopy}} loading="eager" />
                     </div>
                 </Slider>
@@ -86,6 +86,11 @@ const SliderMain = styled.section`
                 &.top-center {
                     img {
                         object-position: top center;
+                    }
+                }
+                &.center-center {
+                    img {
+                        object-position: center center;
                     }
                 }
             }
