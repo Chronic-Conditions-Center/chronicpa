@@ -71,7 +71,7 @@ const MainLayout = styled.div`
     padding-top: 162px;
     transition-duration: .3s;
     @media(max-width:767px) {
-        padding-top: 96px;
+        padding-top: 140px;
     }
 `
 
