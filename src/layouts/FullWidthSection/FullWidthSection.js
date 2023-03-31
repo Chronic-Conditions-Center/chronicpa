@@ -177,6 +177,9 @@ const BlockContent = styled.section`
       list-style-position: outside;
     }
   }
+  img {
+    max-width: 100%;
+  }
   .flex-list {
     flex-wrap: wrap;
     ul, ol {

@@ -31,9 +31,16 @@ class Header extends Component {
             <HeaderFull>
 
                 <HeaderTop className="header-top">
-
-                    <p><a href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>  <span>|</span> Now Accepting New Patients <span>|</span>  <a href="https://live.vcita.com/site/ld2sp6z9us1n52jd/online-scheduling" target="_blank" rel="noreferrer"><FaRegCalendarAlt size={18}/> Schedule a Consult</a></p>
-
+                    <p>
+                        <a className="header-top__phone" href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>
+                        <span> | </span>
+                        <div className="header-top__accepting">Now Accepting New Patients</div>
+                        <span> | </span>
+                        <a className="header-top__consult" href="https://live.vcita.com/site/ld2sp6z9us1n52jd/online-scheduling" target="_blank" rel="noreferrer">
+                            {/* <FaRegCalendarAlt size={18}/>  */}
+                            Schedule a Consult
+                        </a>
+                    </p>
                 </HeaderTop>
 
                 <HeaderMain className={headerName}>
@@ -71,10 +78,13 @@ const HeaderFull = styled.header`
 `
 
 const HeaderTop = styled.div`
-    background-color: #25afb4;
+    position: relative;
     padding: 5px 20px;
     width: 100%;
-    position: relative;
+    font-size: 13px;
+    color: #fff;
+    background-color: #25afb4;
+
     p {
         font-family: "Roboto";
         font-size: 20px;
@@ -110,10 +120,26 @@ const HeaderTop = styled.div`
         }
     }
     @media(max-width:767px) {
+        padding: 5px 0px;
         p {
             font-size: 13px;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            justify-items: center;
             flex-direction: column;
+            .header-top__phone {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            .header-top__consult {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+            .header-top__accepting {
+                grid-column: 1 / 3;
+                grid-row: 2 / 3;
+            }
             a {
                 margin-right: 0;
             }

@@ -3,25 +3,30 @@
 import React from "react"
 import styled from 'styled-components'
 import ImageGallery from 'react-image-gallery'
+import { getSrc } from "gatsby-plugin-image"
+
 
 const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorScheme, galleryBottomPadding, slideshowImages }) => {
 
     const galleryMap = slideshowImages
 
     return (
-      <BlockContent
-      id={gallerySectionId}
-      className={`color-${galleryColorScheme}`}
-      style={{
-          paddingTop: `${galleryTopPadding}px`,
-          paddingBottom: `${galleryBottomPadding}px`
-      }}
-      >
-        <div class="gallery-row">
-            <ImageGallery items={galleryMap.map(item => ({ original: item.original.childImageSharp.fluid.src , thumbnail: item.thumbnail.childImageSharp.fluid.src }))}/>
-        </div>
-      </BlockContent>
-    )
+        <BlockContent
+        id={gallerySectionId}
+        className={`color-${galleryColorScheme}`}
+        style={{
+            paddingTop: `${galleryTopPadding}px`,
+            paddingBottom: `${galleryBottomPadding}px`
+        }}
+        >
+          <div class="gallery-row">
+              <ImageGallery items={galleryMap.map(item => ({ 
+                original: getSrc(item.original),
+                thumbnail: getSrc(item.thumbnail),
+                }))}/>
+          </div>
+        </BlockContent>
+    );
   }
 
   const BlockContent = styled.section`

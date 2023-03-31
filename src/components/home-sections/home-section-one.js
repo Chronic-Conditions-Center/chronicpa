@@ -24,7 +24,7 @@ const HomeSectionOne = () => {
 
 const MainSection = styled.div`
     background-color: #f1f1f1;
-    padding: 50px 20px;
+    padding: 40px 20px;
     > div {
         max-width: 1180px;
         margin: 0 auto;

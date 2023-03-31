@@ -37,16 +37,21 @@ class HeroSlider extends Component {
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideOneCopy}} />
                     </div>
                     <div class="hero-slide">
-                        <GatsbyImage className={"slide-background"} image={slideTwoImage} alt={queryContent.heroSliderV2.hsSlideTwoImage.title} />
+                        <GatsbyImage className={"slide-background top-center"} image={slideTwoImage} alt={queryContent.heroSliderV2.hsSlideTwoImage.title} />
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideTwoCopy}} loading="eager" />
                     </div>
                     <div class="hero-slide">
-                        <GatsbyImage className={"slide-background"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
+                        <GatsbyImage className={"slide-background center-center"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideThreeCopy}} loading="eager" />
                     </div>
                 </Slider>
 
                 <MobileHero>
+                    <GatsbyImage 
+                        className={"mobile-hero-background top-center"} 
+                        image={slideOneImage} 
+                        alt={queryContent.heroSliderV2.hsSlideOneImage.title} 
+                        loading="eager" />
                     <div class="hero-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideOneCopy}} />
                 </MobileHero>
 
@@ -76,10 +81,16 @@ const SliderMain = styled.section`
                 img {
                     height: 100%;
                     object-fit: cover;
+                    object-position: bottom center;
                 }
                 &.top-center {
                     img {
                         object-position: top center;
+                    }
+                }
+                &.center-center {
+                    img {
+                        object-position: center center;
                     }
                 }
             }
@@ -195,8 +206,17 @@ const SliderMain = styled.section`
 const MobileHero = styled.section`
     display: none;
     background-color: #25afb4;
-    padding: 80px 20px 20px;
+
+    .mobile-hero-background {
+        grid-area: 1/1;
+        z-index: 0;
+    }
     .hero-content {
+        position: relative;
+        z-index: 1;
+        grid-area: 1/1;
+        padding: 80px 20px 20px;
+        background: rgba(0,0,0,0.6);
         text-align: center;
     }
     h1,
@@ -217,31 +237,34 @@ const MobileHero = styled.section`
         transition-duration: .3s;
     }
     a {
+        display: inline-block;
+        margin: 10px auto;
+        padding: 10px 35px;
+
+        border: 2px solid #fff;
+        border-radius: 50px;
+
         font-family: Roboto;
-        font-size: 24px;
+        font-size: 16px;
+        font-weight: 500;
         line-height: 1.5;
         color: #fff;
         text-decoration: none;
-        font-family: Roboto;
-        font-size: 24px;
-        line-height: 1.5;
+
         color: #25afb4;
         background-color: #fff;
-        padding: 10px 50px;
-        border: 2px solid #fff;
-        border-radius: 50px;
+
         transition-duration: .3s;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px auto;
-        padding: 10px 35px;
+
+
+
         &:hover {
             color: #25afb4;
             background-color: #fff;
         }
     }
     @media(max-width:767px) {
-        display: block;
+        display: grid;
     }
 `
 

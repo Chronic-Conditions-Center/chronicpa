@@ -124,13 +124,15 @@ const MainSection = styled.section`
         .flex-row {
             .flex-col {
                 width: 100%;
+                margin-bottom: 2em;
             }
         }
         h2 {
             font-size: 28px;
         }
         h3 {
-            font-size: 20px;
+            font-size: 24px;
+            margin-bottom: 0.7em;
         }
         p {
             font-size: 16px;

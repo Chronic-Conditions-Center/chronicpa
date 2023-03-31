@@ -14,12 +14,12 @@ import ContactSection from "../components/home-sections/contact-section"
 
 const IndexPage = ({ data: { queryContent } }) => {
 
-    return(
+    return (
         <Layout>
             <Seo 
             title={queryContent.seo.title} 
             description={queryContent.seo.metaDesc}
-            metaImage={queryContent.seo.opengraphImage.localFile.childImageSharp.fluid}
+            metaImage={queryContent.seo.opengraphImage.localFile.childImageSharp.gatsbyImageData}
             />
             <HeroSlider/>
             <HomeSectionOne />
@@ -28,28 +28,24 @@ const IndexPage = ({ data: { queryContent } }) => {
             <HomeSectionThree/>
             <ContactSection />
         </Layout>
-    )
+    );
 
 }
 
 export default IndexPage
 
-export const pageQuery = graphql`
-    query {
-        queryContent: wpHomeSection(databaseId: {eq: 32}) {
-            seo {
-                title
-                metaDesc
-                opengraphImage {
-                  localFile {
-                    childImageSharp {
-                      fluid(maxWidth: 1920) {
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
-                }
-            }
+export const pageQuery = graphql`{
+  queryContent: wpHomeSection(databaseId: {eq: 32}) {
+    seo {
+      title
+      metaDesc
+      opengraphImage {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
+      }
     }
-`
+  }
+}`

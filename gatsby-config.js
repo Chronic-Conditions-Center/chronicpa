@@ -36,6 +36,9 @@ module.exports = {
         url:
           process.env.WPGRAPHQL_URL ||
           `http://admin.chronicpa.com/graphql`,
+        develop: {
+          hardCacheMediaFiles: true,
+        }
       },
     },
 
@@ -113,7 +116,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
-    'gatsby-plugin-page-transitions',
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,

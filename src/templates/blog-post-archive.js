@@ -34,7 +34,7 @@ const BlogIndex = ({
       <Seo 
       title={SeoData.seo.title} 
       description={SeoData.seo.metaDesc}
-      metaImage={SeoData.seo.opengraphImage.localFile.childImageSharp.fluid}
+      metaImage={SeoData.seo.opengraphImage.localFile.childImageSharp.gatsbyImageData}
       />
 
       <MainBlog>
@@ -89,7 +89,7 @@ const BlogIndex = ({
       </MainBlog>
 
     </Layout>
-  )
+  );
 }
 
 const MainBlog = styled.section`
@@ -207,58 +207,46 @@ const MainBlog = styled.section`
 
 export default BlogIndex
 
-export const pageQuery = graphql`
-  query WordPressPostArchive($offset: Int!, $postsPerPage: Int!) {
-    allWpPost(
-      sort: { fields: [date], order: DESC }
-      limit: $postsPerPage
-      skip: $offset
-    ) {
-      nodes {
-        excerpt
-        uri
-        date(formatString: "MMMM DD, YYYY")
-        title
-        excerpt
-        featuredImage {
-          node {
-            title
-            localFile {
-              childImageSharp {
-                gatsbyImageData (
-                  width: 800
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-              )
-              }
+export const pageQuery = graphql`query WordPressPostArchive($offset: Int!, $postsPerPage: Int!) {
+  allWpPost(
+    sort: {fields: [date], order: DESC}
+    limit: $postsPerPage
+    skip: $offset
+  ) {
+    nodes {
+      excerpt
+      uri
+      date(formatString: "MMMM DD, YYYY")
+      title
+      excerpt
+      featuredImage {
+        node {
+          title
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
         }
       }
     }
-    wpPage(databaseId: { eq: 808 }) {
-      seo {
-        title
-        metaDesc
-        opengraphImage {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
+  }
+  wpPage(databaseId: {eq: 808}) {
+    seo {
+      title
+      metaDesc
+      opengraphImage {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
       }
     }
-    file(relativePath: { eq: "banner_bg.jpg" }) {
-      childImageSharp {
-        gatsbyImageData (
-            width: 1950
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-        )
-      }
+  }
+  file(relativePath: {eq: "banner_bg.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 1950, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
     }
   }
-`
+}`
