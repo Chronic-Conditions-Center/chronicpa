@@ -32,14 +32,14 @@ class Header extends Component {
 
                 <HeaderTop className="header-top">
                     <p>
-                        <a className="header-top__phone" href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>
-                        <span> | </span>
-                        <div className="header-top__accepting">Now Accepting New Patients</div>
-                        <span> | </span>
                         <a className="header-top__consult" href="https://live.vcita.com/site/ld2sp6z9us1n52jd/online-scheduling" target="_blank" rel="noreferrer">
                             {/* <FaRegCalendarAlt size={18}/>  */}
                             Schedule a Consult
                         </a>
+                        <span> | </span>
+                        <a className="header-top__phone" href="tel:+14125957332"><FaPhone size={18}/> 412-595-7332</a>
+                        <span> | </span>
+                        <div className="header-top__accepting">Now Accepting New Patients</div>
                     </p>
                 </HeaderTop>
 
