@@ -8,7 +8,7 @@ import Seo from "../components/seo"
 import HeroSlider from "../components/home-sections/hero-slider"
 import HomeSectionOne from "../components/home-sections/home-section-one"
 import SectionTwoCopy from "../components/home-sections/section-two-copy"
-import TestimonialSlider from '../components/home-sections/testimonial-slider-v2'
+import Testimonials from '../components/home-sections/testimonials-section'
 import HomeSectionThree from "../components/home-sections/home-section-three"
 import ContactSection from "../components/home-sections/contact-section"
 
@@ -23,7 +23,7 @@ const IndexPage = ({ data: { queryContent } }) => {
             />
             <HeroSlider/>
             <HomeSectionOne />
-            <TestimonialSlider />
+            <Testimonials />
             <SectionTwoCopy />
             <HomeSectionThree/>
             <ContactSection />
