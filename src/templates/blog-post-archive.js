@@ -56,7 +56,7 @@ const BlogIndex = ({
                     itemType="http://schema.org/Article"
                   >
                     <div class="article-image">
-                      <GatsbyImage image={post.featuredImage.node.localFile.childImageSharp.gatsbyImageData} alt={post.featuredImage.node.title} />
+                      <GatsbyImage image={getImage(post.featuredImage?.node.localFile.childImageSharp)} alt={post.featuredImage?.node?.title} />
                     </div>
                     <div class="article-content">
                       <header>
