@@ -14,7 +14,7 @@ import ContactForm from "../../components/contact-form"
 
 const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadding, contactColorScheme, contactImage, contactAddress, contactPhoneLabel, contactPhoneLink, contactFaxLabel, contactFaxLink, contactEmail, contactDirectionsLink, contactGoogleMapEmbed }) => {
 
-    const mainImage = getImage(contactImage.localFile.childImageSharp.gatsbyImageData)
+    const mainImage = getImage(contactImage?.localFile.childImageSharp.gatsbyImageData)
     
     return (
       <BlockContent
@@ -35,7 +35,7 @@ const ContactSection = ({ contactSectionId, contactTopPadding, contactBottomPadd
                 <h2>Get in touch</h2>
                 <div class="flex-row">
                     <div class="half-col">
-                        <GatsbyImage image={mainImage} alt={contactImage.title} />
+                        {mainImage && <GatsbyImage image={mainImage} alt={contactImage.title} />}
                     </div>
                     <div class="half-col">
                         <div dangerouslySetInnerHTML={{__html: contactAddress}} />
