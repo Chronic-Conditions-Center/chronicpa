@@ -41,7 +41,7 @@ class HeroSlider extends Component {
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideTwoCopy}} loading="eager" />
                     </div>
                     <div class="hero-slide">
-                        <GatsbyImage className={"slide-background top-center"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
+                        <GatsbyImage className={"slide-background happy-couple-image-alignment"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideThreeCopy}} loading="eager" />
                     </div>
                 </Slider>
@@ -91,6 +91,11 @@ const SliderMain = styled.section`
                 &.center-center {
                     img {
                         object-position: center center;
+                    }
+                }
+                &.happy-couple-image-alignment {
+                    img {
+                        object-position: 50% 35%;
                     }
                 }
             }
