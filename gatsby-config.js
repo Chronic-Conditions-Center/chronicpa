@@ -38,7 +38,14 @@ module.exports = {
           `http://admin.chronicpa.com/graphql`,
         develop: {
           hardCacheMediaFiles: true,
-        }
+        },
+        type: {
+          MediaItem: {
+            localFile: {
+              requestConcurrency: 20,
+            },
+          },
+        },
       },
     },
 
