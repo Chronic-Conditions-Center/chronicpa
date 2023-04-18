@@ -41,7 +41,7 @@ class HeroSlider extends Component {
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideTwoCopy}} loading="eager" />
                     </div>
                     <div class="hero-slide">
-                        <GatsbyImage className={"slide-background center-center"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
+                        <GatsbyImage className={"slide-background top-center"} image={slideThreeImage} alt={queryContent.heroSliderV2.hsSlideThreeImage.title} />
                         <div class="slide-content" dangerouslySetInnerHTML={{ __html: queryContent.heroSliderV2.hsSlideThreeCopy}} loading="eager" />
                     </div>
                 </Slider>
