@@ -136,6 +136,7 @@ const MainNav = styled.nav`
                         line-height: 34px;
                         text-transform: uppercase;
                         transition-duration: .3s;
+                        white-space: nowrap;
                         &:hover {
                             background-color: #f8f8f8;
                         }
