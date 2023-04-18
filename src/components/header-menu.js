@@ -1,75 +1,72 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+
 import styled from 'styled-components'
 
 import { FaChevronDown } from 'react-icons/fa';
 
+const flatListToHierarchical = (
+    data = [],
+    { idKey = "id", parentKey = "parentId", childrenKey = "children" } = {}
+  ) => {
+    const tree = []
+    const childrenOf = {}
+    data.forEach(item => {
+      const newItem = { ...item }
+      const { [idKey]: id, [parentKey]: parentId = 0 } = newItem
+      childrenOf[id] = childrenOf[id] || []
+      newItem[childrenKey] = childrenOf[id]
+      parentId
+        ? (childrenOf[parentId] = childrenOf[parentId] || []).push(newItem)
+        : tree.push(newItem)
+    })
+    return tree
+  }
+
 const HeaderMenu = () => {
+    const { wpMenu } = useStaticQuery(graphql`
+    query WPMenuQuery {
+      # if there was more than one user, this would need to be filtered
+      wpMenu(locations: { eq: HEADER_MENU }) {
+        id
+        name
+        menuItems {
+        nodes {
+            id
+            label
+            title
+            path
+            parentId
+        }
+        }
+      }
+    }
+  `)
 
-    return(
-        <MainNav>
-            <ul class="main-menu">
-                {/* <li><Link to={"/history/"}>About Us</Link></li> */}
-                <li class={"has-submenu"}>About Us <FaChevronDown size={12}/>
-                    <ul class="submenu">
-                        <li><Link to={"/history/"}>Our History</Link></li>
-                        <li><Link to={"/meet-the-staff/"}>Meet the Staff</Link></li>
-                    </ul>
-                </li>
-                <li class={"has-submenu"}>Conditions <FaChevronDown size={12}/>
-                    <ul class="submenu large">
-                        <li><Link to={"/back-pain/"}>Back Pain</Link></li>
-                        <li><Link to={"/neck-pain/"}>Neck Pain</Link></li>
-                        <li><Link to={"/shoulder-pain/"}>Shoulder Pain</Link></li>
-                        {/* <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li> */}
-                        <li><Link to={"/hip-pain-chiropractor/"}>Hip Pain</Link></li>
-                        <li><Link to={"/knee-pain/"}>Knee Pain</Link></li>
-                        <li><Link to={"/foot-pain-relief/"}>Foot Pain</Link></li>
-                        <li><Link to={"/car-accident-pain/"}>Car Accident Pain</Link></li>
-                        <li><Link to={"/numbness-tingling/"}>Numbness/Tingling</Link></li>
-                        <li><Link to={"/chiropractic-for-herniated-discs/"}>Herniated Disc</Link></li>
-                        <li><Link to={"/peripheral-neuropathy/"}>Peripheral Neuropathy</Link></li>
-                        <li><Link to={"/sciatica-treatment/"}>Sciatica</Link></li>
-                        <li><Link to={"/scoliosis-chiropactic/"}>Scoliosis</Link></li>
-                        <li><Link to={"/spinal-stenosis/"}>Spinal Stenosis</Link></li>
-                        {/* <li><Link to={"/thyroid-problems/"}>Thyroid Problems</Link></li> */}
-                        <li><Link to={"/thyroid/"}>Low Thyroid</Link></li>
-                        <li><Link to={"/spinal-pain/"}>Spinal Pain</Link></li>
-                        <li><Link to={"/sports-injuries/"}>Sports Injuries</Link></li>
-                    </ul>
-                </li>
-                <li class={"has-submenu"}>Services <FaChevronDown size={12}/>
-                    <ul class="submenu large">
-                        {/* <li><Link to={"/viscosupplementation/"}>Viscosupplementation</Link></li>
-                        <li><Link to={"/platelet-rich-plasma/"}>Platelet Rich Plasma</Link></li>
-                        <li><Link to={"/electroanalgesia/"}>Electroanalgesia</Link></li> */}
-                        <li><Link to={"/chiropractic/"}>Chiropractic</Link></li>
-                        <li><Link to={"/weight-loss/"}>Weight Loss</Link></li>
-                        <li><Link to={"/thyroid-restoration/"}>Thyroid Restoration</Link></li>
-                        <li><Link to={"/laser/"}>Laser</Link></li>
-                        <li><Link to={"/spinal-decompression/"}>Decompression</Link></li>
-                        <li><Link to={"/pulsewave-therapy/"}>Pulsewave</Link></li>
-                        <li><Link to={"/rehabilitation/"}>Rehabilitation</Link></li>
-                        <li><Link to={"/integrative-functional-medicine/"}>Functional Medicine</Link></li>
-                        <li><Link to={"/soft-tissue-therapy/"}>Soft Tissue Therapy</Link></li>
-                        {/* <li><Link to={"/cord-tissue-matrix/"}>Cord Tissue Matrix</Link></li> */}
-                    </ul>
-                </li>
-                <li class={"has-submenu"}>Patient Resources <FaChevronDown size={12}/>
-                    <ul class="submenu">
-                        <li><Link to={"/new-patients/"}>New Patients</Link></li>
-                        <li><Link to={"/tour-of-the-office/"}>Tour of the Office</Link></li>
-                        <li><Link to={"/blog/"}>Blog</Link></li>
-                        <li><Link to={"/fullscript/"}>Store</Link></li>
-                        {/* <li><Link to={"/research/"}>Research</Link></li> */}
-                    </ul>
-                </li>
-                <li><Link to={"/testimonials/"}>Testimonials</Link></li>
-                <li><Link to={"/contact/"}>Contact</Link></li>
-            </ul>
-        </MainNav>
-    )
+  const wpMenuHierarchy = flatListToHierarchical(wpMenu.menuItems.nodes)
 
+  return  (<MainNav>
+    <ul class="main-menu">
+        {wpMenuHierarchy.map((item) => {
+            if (item.children.length > 0) {
+                return (
+                    <li class={"has-submenu"}>{item.label} <FaChevronDown size={12}/>
+                        <ul class={`submenu ${item.children.length > 5 ? "large" : ""}`}>
+                            {item.children.map((child) => {
+                                return (
+                                    <li><Link to={child.path}>{child.label}</Link></li>
+                                )
+                            })}
+                        
+                        </ul>
+                    </li>
+                )
+        } else {
+            return <li><Link to={item.path}>{item.label}</Link></li>
+        }
+    })}
+    </ul>
+  </MainNav>)
 }
 
 const MainNav = styled.nav`
