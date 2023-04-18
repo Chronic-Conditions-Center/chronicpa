@@ -3,8 +3,8 @@
 import React from "react"
 import styled from 'styled-components'
 import ImageGallery from 'react-image-gallery'
-import { getSrc } from "gatsby-plugin-image"
-
+import { getImage, getSrc, getSrcSet } from "gatsby-plugin-image"
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorScheme, galleryBottomPadding, slideshowImages }) => {
 
@@ -20,10 +20,17 @@ const GallerySlideshow = ({ gallerySectionId, galleryTopPadding, galleryColorSch
         }}
         >
           <div class="gallery-row">
-              <ImageGallery items={galleryMap.map(item => ({ 
+              <ImageGallery 
+              items={galleryMap.map(item => ({ 
                 original: getSrc(item.original),
                 thumbnail: getSrc(item.thumbnail),
-                }))}/>
+                srcSet: getSrcSet(item.original),
+                //@todo: height is not set properly, so temporarily hard-coded to 500px
+                originalHeight: 500, //getImage(item.original).height,
+                loading: "eager",
+                }))}
+                showFullscreenButton={false}
+                />
           </div>
         </BlockContent>
     );
