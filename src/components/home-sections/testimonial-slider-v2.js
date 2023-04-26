@@ -29,7 +29,7 @@ const TestimonialSliderV2 = () => {
         autoplaySpeed: 6000,
     };
 
-    return(
+    return data.queryContent ? (
         
         <MainSection>
 
@@ -53,7 +53,7 @@ const TestimonialSliderV2 = () => {
             </div>
                 
         </MainSection>
-    );
+    ) : null;
 
 }
 

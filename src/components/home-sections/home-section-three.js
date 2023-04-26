@@ -12,13 +12,13 @@ const HomeSectionThree = () => {
         }
     `)
 
-    return(
+    return data.queryContent?.content ? (
 
         <MainSection>
             <div dangerouslySetInnerHTML={{ __html: data.queryContent.content}} />
         </MainSection>
         
-    )
+    ) : null;
 
 }
 

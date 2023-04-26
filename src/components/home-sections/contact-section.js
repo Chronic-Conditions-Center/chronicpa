@@ -19,7 +19,7 @@ const ContactSection = () => {
         }
     `)
 
-    return(
+    return data.queryContent ? (
 
         <MainSection id={"home_contact"}>
             <Helmet>
@@ -53,7 +53,7 @@ const ContactSection = () => {
             </div>
         </MainSection>
         
-    )
+    ) : null;
 
 }
 

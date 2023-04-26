@@ -28,7 +28,7 @@ class HeroSlider extends Component {
             slidesToScroll: 1
         };
 
-        return(
+        return queryContent ? (
             <SliderMain>
 
                 <Slider {...settings}>
@@ -56,7 +56,7 @@ class HeroSlider extends Component {
                 </MobileHero>
 
             </SliderMain>
-        )
+        ) : null;
 
     }
 
