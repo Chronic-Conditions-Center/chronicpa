@@ -19,7 +19,7 @@ const Page = ({ data: { page } }) => {
       />
       <article>
             {   
-                layouts.map((layout, index) => {
+                layouts?.map((layout, index) => {
                     return <StandardPageBuilder key={index} layoutData={layout} />
                 })
             }
